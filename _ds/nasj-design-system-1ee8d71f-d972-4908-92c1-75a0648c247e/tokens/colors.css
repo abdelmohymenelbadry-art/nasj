@@ -1,0 +1,66 @@
+/* NASJ — Color tokens  ·  v3 LOCKED: ink + thread-EVENT
+ *
+ * The environment is a reading room: warm paper ground, near-black ink, and a
+ * muted stone for English annotation. THERE IS NO STANDING ACCENT COLOUR.
+ *
+ * 98% ink on paper. The single madder weft — `--thread-event` (#B23A1A) — is an
+ * EVENT, not a property: it is painted only at the moment of connection in the
+ * loom (one weft thread + its knot), and NOWHERE else. Words, numbers, dividers,
+ * active states, links, hover, focus, email — all ink.
+ *
+ * The old earthen accent (#8D5C4B) is RETIRED. `--thread` and every accent alias
+ * now resolve to ink, so any consumer that still reads var(--thread) (Badge,
+ * Card top-rule, PullQuote, ThreadDivider, Tabs underline, form focus, Switch…)
+ * renders ink automatically. To use the event red, reference --thread-event
+ * explicitly on the single loom mark; to defer colour entirely, override
+ * --thread-event: var(--ink) on the page root (pure mono).
+ */
+:root {
+  /* — Base palette (authoritative) — */
+  --paper: #F5F1E8;          /* background — warm paper */
+  --ink: #1E1B18;            /* primary text — near-black */
+  --annotation: #9C938A;     /* annotation swatch — muted stone (authoritative) */
+  --annotation-ink: #7B736B; /* citation/metadata TEXT — higher contrast than the swatch */
+
+  /* — The standing "accent" is ink (no colour) — */
+  --thread: var(--ink);      /* retired earthen accent → ink; the one legal accent is ink */
+
+  /* — The single reserved EVENT red — only at the loom's connection moment — */
+  --thread-event: #B23A1A;   /* one madder weft thread + its knot; never standing chrome */
+
+  /* — Derived neutrals (oklch, harmonious with paper/ink) — */
+  --paper-raised: oklch(0.955 0.012 82);   /* slightly lifted surface */
+  --paper-sunken: oklch(0.925 0.014 80);   /* recessed / inset wells */
+  --paper-edge:   oklch(0.885 0.016 78);   /* hairlines on paper */
+  --ink-soft:     oklch(0.42 0.012 60);    /* secondary ink */
+  --ink-faint:    oklch(0.62 0.010 62);    /* tertiary ink */
+
+  /* — "Thread" states, now ink-based (no standing colour) — */
+  --thread-deep:  var(--ink);              /* pressed / hover — ink, not colour */
+  --thread-tint:  rgba(30, 27, 24, 0.06);  /* quiet ink wash behind marked areas */
+  --thread-line:  var(--ink);              /* woven rule lines — ink */
+
+  /* — Semantic aliases — */
+  --surface-page:    var(--paper);
+  --surface-card:    var(--paper-raised);
+  --surface-inset:   var(--paper-sunken);
+  --border-hairline: var(--paper-edge);
+  --border-strong:   var(--ink);
+
+  --text-body:       var(--ink);
+  --text-muted:      var(--ink-soft);
+  --text-faint:      var(--ink-faint);
+  --text-annotation: var(--annotation-ink);   /* citation/metadata text */
+  --text-accent:     var(--ink);               /* accented text is ink, not colour */
+
+  /* English body copy (the /en surface). Warmer than ink but darkened to meet
+   * WCAG AA (≥4.5:1 on paper). Annotation stone must NOT be used for English body. */
+  --text-en-body:    #6B6058;
+
+  --accent:          var(--ink);
+  --accent-hover:    var(--ink);
+  --accent-wash:     rgba(30, 27, 24, 0.08);
+
+  --focus-ring:      var(--ink);               /* focus is an ink underline, not a glow */
+  --selection-bg:    rgba(30, 27, 24, 0.10);
+}

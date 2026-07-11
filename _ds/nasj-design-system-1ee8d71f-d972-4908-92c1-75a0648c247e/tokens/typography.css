@@ -1,0 +1,53 @@
+/* NASJ — Typography tokens
+ * Arabic Display  → Amiri (headlines, titles, pull quotes)
+ * Arabic Body     → IBM Plex Sans Arabic (running text, UI)
+ * English Annotation → Cormorant Garamond, italic (margin notes, English labels)
+ */
+:root {
+  /* — Families — */
+  --font-display: 'Amiri', 'Times New Roman', serif;               /* Arabic display */
+  --font-body: 'IBM Plex Sans Arabic', system-ui, sans-serif;      /* Arabic body / UI */
+  --font-annotation: 'Cormorant Garamond', Georgia, serif;         /* English annotation (use italic) */
+
+  /* — English-native surface (the /en orientation layer) —
+   * The English experience inherits NASJ foundations but is set in Latin type:
+   * Cormorant Garamond display over IBM Plex Sans (Latin) body — the Plex family
+   * keeps it coherent with the Arabic IBM Plex Sans body. */
+  --font-en-display: 'Cormorant Garamond', Georgia, serif;         /* English display / headings */
+  --font-en-body: 'IBM Plex Sans', system-ui, sans-serif;          /* English running text / UI */
+
+  /* — Type scale (paper-quiet, generous) — */
+  --text-xs:   13px;
+  --text-sm:   15px;
+  --text-base: 17px;
+  --text-md:   19px;
+  --text-lg:   24px;
+  --text-xl:   32px;
+  --text-2xl:  44px;
+  --text-3xl:  60px;
+  --text-4xl:  84px;
+
+  /* — Line heights — */
+  --leading-tight: 1.18;
+  --leading-snug:  1.35;
+  --leading-body:  1.7;    /* Arabic running text breathes */
+  --leading-loose: 1.9;
+
+  /* — Weights — */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* — Tracking — */
+  --tracking-wide: 0.08em;   /* for latin annotation smallcaps-ish labels */
+  --tracking-normal: 0;
+
+  /* — Semantic roles — */
+  --type-display: var(--weight-regular) var(--text-4xl)/var(--leading-tight) var(--font-display);
+  --type-title:   var(--weight-regular) var(--text-2xl)/var(--leading-snug) var(--font-display);
+  --type-heading: var(--weight-semibold) var(--text-lg)/var(--leading-snug) var(--font-body);
+  --type-body:    var(--weight-regular) var(--text-base)/var(--leading-body) var(--font-body);
+  --type-small:   var(--weight-regular) var(--text-sm)/var(--leading-snug) var(--font-body);
+}

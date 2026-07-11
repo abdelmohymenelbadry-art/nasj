@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="../_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/fonts.css">
+<link rel="stylesheet" href="../_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/colors.css">
+<link rel="stylesheet" href="../_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/typography.css">
+<link rel="stylesheet" href="../_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/spacing.css">
+<link rel="stylesheet" href="../_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/styles.css">
+<script src="../_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/_ds_bundle.js"></script>
+<style>
+  html{scroll-behavior:smooth;background:var(--paper);}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-en-body,var(--font-body));-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  ::selection{background:rgba(30,27,24,0.10);color:var(--ink);}
+  @keyframes nsjReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto!important}
+    [data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+    #nsjen-bar{animation:none!important;opacity:1!important}
+  }
+  @media (max-width: 480px){
+    svg[aria-hidden="true"]{display:none!important;}
+  }
+  .nsjen-room + .nsjen-room{margin-top:clamp(32px,6vh,80px);border-top:1px solid var(--border-hairline);}
+</style>
+</helmet>
+
+<div dir="ltr" lang="en" style="font-family:var(--font-en-body,var(--font-body));position:relative;">
+
+  <!-- ===== masthead ===== -->
+  <header id="nsjen-bar" style="position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--border-hairline);">
+    <div style="max-width:1120px;margin:0 auto;padding:16px clamp(24px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="#nsjen-s1" aria-label="Nasj · نسج" style="display:inline-flex;align-items:baseline;gap:11px;text-decoration:none;flex:none;">
+        <span style="font-family:var(--font-annotation);font-weight:500;font-size:13px;line-height:1;letter-spacing:.30em;opacity:.65;color:var(--ink);">NASJ</span>
+        <span style="font-family:var(--font-display);font-weight:700;font-size:23px;line-height:1;color:var(--ink);">نسج</span>
+      </a>
+      <nav aria-label="Navigation" id="nsjen-nav" style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.7vw,26px);align-items:center;">
+        <a href="../site.html?page=evidence&amp;lang=en" data-route-page="evidence" data-route-lang="en" style="font-family:var(--font-en-body,var(--font-body));font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">Evidence</a>
+        <a href="../site.html?page=work&amp;lang=en" data-route-page="work" data-route-lang="en" style="font-family:var(--font-en-body,var(--font-body));font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">Work</a>
+        <a href="../site.html?page=field&amp;lang=en" data-route-page="field" data-route-lang="en" style="font-family:var(--font-en-body,var(--font-body));font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">Field</a>
+        <a href="../site.html?page=writing&amp;lang=en" data-route-page="writing" data-route-lang="en" style="font-family:var(--font-en-body,var(--font-body));font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">Writing</a>
+        <a href="../site.html?page=about&amp;lang=en" data-route-page="about" data-route-lang="en" style="font-family:var(--font-en-body,var(--font-body));font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">About</a>
+        <a href="../site.html?page=contact&amp;lang=en" data-route-page="contact" data-route-lang="en" style="font-family:var(--font-en-body,var(--font-body));font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">Contact</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;flex:none;">
+        <a href="../index.html" data-route-page="home" data-route-lang="ar" style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">العربية</a>
+        <span aria-hidden="true" style="width:1px;height:13px;background:var(--border-hairline);"></span>
+        <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--ink);">English</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== progress thread ===== -->
+  <div id="nsjen-spine" aria-hidden="true" style="position:fixed;top:0;bottom:0;right:max(2.4vw,20px);width:12px;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <div style="position:absolute;top:16vh;bottom:16vh;width:1px;background:var(--border-hairline);"></div>
+    <div class="nsjen-knot" data-knot="1" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsjen-knot" data-knot="2" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsjen-knot" data-knot="3" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsjen-knot" data-knot="4" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsjen-knot" data-knot="5" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsjen-knot" data-knot="6" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsjen-knot" data-knot="7" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+  </div>
+
+  <!-- ===== gallery wall-label ===== -->
+  <div id="nsjen-index" aria-hidden="true" style="position:fixed;right:calc(max(2.4vw,20px) + 22px);bottom:26px;z-index:30;padding-inline-start:16px;font-family:var(--font-en-body,var(--font-body));font-size:12.5px;font-weight:500;letter-spacing:.1em;color:var(--text-muted);writing-mode:vertical-rl;text-orientation:mixed;transition:opacity var(--dur-slow) var(--ease-quiet);"><span style="color:var(--ink);font-weight:700;">01</span> / 07<br>Arrival</div>
+
+  <!-- ===================== ROOMS ===================== -->
+  <main style="position:relative;z-index:1;">
+
+    <!-- S1 — ARRIVAL -->
+    <section class="nsjen-room" id="nsjen-s1" data-room="1" data-name="arrival" data-screen-label="EN S1 Arrival" style="min-height:clamp(560px,72vh,820px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;">
+      <div style="max-width:1040px;margin:0 auto;width:100%;">
+        <h1 data-reveal data-delay="0" style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.28;margin:0;font-size:clamp(2.6rem,5.6vw,5rem);color:var(--ink);">
+          The <span style="border-bottom:0.045em solid var(--ink);padding-bottom:.12em;">whiteboard</span> photo.<br>Everyone took it. No one read it the same way.
+        </h1>
+        <p data-reveal data-delay="160" style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--text-en-body,var(--text-muted));max-width:38ch;line-height:1.75;margin:2.6rem 0 0;font-weight:300;">
+          The offsite ended. Everyone nodded. Then everyone went back to their desks.
+        </p>
+        <div data-reveal data-delay="320" style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-top:3.4rem;font-weight:500;text-transform:lowercase;">scroll slowly</div>
+      </div>
+      <p data-reveal data-delay="320" style="margin:clamp(48px, 8vh, 96px) auto 0;max-width:1040px;width:100%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;color:var(--ink);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.5;">
+        This happens more often than most teams admit.
+      </p>
+    </section>
+
+    <!-- S2 — FRAGMENTATION -->
+    <section class="nsjen-room" id="nsjen-s2" data-room="2" data-name="fragmentation" data-screen-label="EN S2 Fragmentation" style="min-height:clamp(620px,80vh,920px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;">
+      <div style="max-width:1040px;margin:0 auto;width:100%;">
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-bottom:1.8rem;font-weight:500;text-transform:lowercase;">the problem</div>
+        <h2 style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.2;margin:0;font-size:clamp(2.1rem,5vw,4.4rem);max-width:22ch;color:var(--ink);">
+          One photo. Three different roadmaps.
+        </h2>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:3rem;">
+          <svg viewBox="0 0 560 66" width="100%" style="max-width:560px;display:block;" aria-hidden="true">
+            <g stroke="#9C938A" stroke-width="2" fill="none" stroke-linecap="round">
+              <line x1="10" y1="20" x2="74" y2="13"></line>
+              <line x1="128" y1="50" x2="188" y2="41"></line>
+              <line x1="240" y1="15" x2="292" y2="31"></line>
+              <line x1="344" y1="54" x2="408" y2="45"></line>
+              <line x1="462" y1="22" x2="540" y2="35"></line>
+            </g>
+          </svg>
+        </div>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:2.4rem;">
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.75;color:var(--ink);max-width:38ch;margin:0;font-weight:300;">Two weeks later, two teams discover they built against different versions of the same plan.<br>A month later, a disagreement resurfaces that everyone thought the offsite had settled.<br>Three months later, someone asks: when did we actually decide this?</p>
+          <p style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.7rem,2.8vw,2.3rem);color:var(--ink);line-height:1.4;max-width:22ch;margin:1.9rem 0 0;">Everyone was right, each in their own way.</p>
+        </div>
+      </div>
+      <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1040px;width:100%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;color:var(--ink);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.5;">
+        This is where Nasj starts.
+      </p>
+    </section>
+
+    <!-- S3 — TERRITORY -->
+    <section class="nsjen-room" id="nsjen-s3" data-room="3" data-name="territory" data-screen-label="EN S3 Territory" style="min-height:clamp(620px,80vh,920px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;">
+      <div style="max-width:1040px;margin:0 auto;width:100%;">
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-bottom:1.8rem;font-weight:500;text-transform:lowercase;">position</div>
+        <h2 style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.2;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">
+          The usual fix doesn't touch the problem.
+        </h2>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:3.2rem;">
+          <svg viewBox="0 0 760 96" width="100%" style="max-width:760px;display:block;overflow:visible;" aria-hidden="true">
+            <text x="34" y="34" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="600" font-size="26" fill="#1E1B18">the picture</text>
+            <text x="726" y="34" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="600" font-size="26" fill="#1E1B18">what people do next</text>
+            <line x1="34" y1="60" x2="726" y2="60" stroke="#1E1B18" stroke-width="1.6"></line>
+            <circle cx="34" cy="60" r="4.5" fill="#1E1B18"></circle>
+            <circle cx="726" cy="60" r="4.5" fill="#9C938A"></circle>
+            <text x="380" y="88" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="12" fill="#7B736B">Nasj works here</text>
+          </svg>
+        </div>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:2.4rem;">
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.75;color:var(--ink);max-width:42ch;margin:0;font-weight:300;">They call in an agency to sharpen the message. Or a consultant to force a decision from the top. Sometimes it all gets written into a report that sits in an archive. But the roadmaps that came out of that one photo stay exactly as divergent as they were. Nasj works there specifically — on the picture itself, not the message, the decision, or the archive.<br><br>The same divergence shows up in a coalition, a campaign, or a research team — not just company meetings.</p>
+        </div>
+      </div>
+      <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1040px;width:100%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;color:var(--ink);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.5;">
+        So the question is: who goes back and rebuilds the picture that broke apart in that room?
+      </p>
+    </section>
+
+    <!-- S4 — THE LOOM -->
+    <section class="nsjen-room" id="nsjen-s4" data-room="4" data-name="the loom" data-screen-label="EN S4 The Loom" style="min-height:clamp(680px,85vh,980px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;background:var(--paper-sunken);">
+      <div style="max-width:1040px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr;gap:clamp(2.4rem,5vw,4rem);align-items:center;" id="nsjen-loom-grid">
+        <div>
+          <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-bottom:1.8rem;font-weight:500;text-transform:lowercase;">the loom</div>
+          <h2 style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.2;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">
+            Not a production line. A loom.
+          </h2>
+          <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:2.4rem;">
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.75;color:var(--ink);max-width:38ch;margin:0;font-weight:300;">We go back to that meeting, and ask each person in it one question: what exactly did you take away?</p>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.75;color:var(--ink);max-width:38ch;margin:1.3rem 0 0;font-weight:300;">We write the answers side by side, and see exactly where they contradict.</p>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.75;color:var(--ink);max-width:38ch;margin:1.3rem 0 0;font-weight:300;">Then we build one version that everyone actually agrees to — not just nods at.</p>
+          </div>
+        </div>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 40%;">
+          <svg viewBox="0 0 380 180" width="100%" style="max-width:460px;display:block;margin:0 auto;" aria-hidden="true">
+            <g stroke="#9C938A" stroke-width="1.3" opacity="0.55">
+              <line x1="46" y1="22" x2="46" y2="158"></line>
+              <line x1="94" y1="22" x2="94" y2="158"></line>
+              <line x1="142" y1="22" x2="142" y2="158"></line>
+              <line x1="190" y1="22" x2="190" y2="158"></line>
+              <line x1="238" y1="22" x2="238" y2="158"></line>
+              <line x1="286" y1="22" x2="286" y2="158"></line>
+              <line x1="334" y1="22" x2="334" y2="158"></line>
+            </g>
+            <g stroke="#1E1B18" stroke-width="1.8">
+              <line x1="26" y1="52" x2="354" y2="52"></line>
+              <line x1="26" y1="90" x2="354" y2="90" stroke="#B23A1A" data-thread-event=""></line>
+              <line x1="26" y1="128" x2="354" y2="128"></line>
+            </g>
+            <g fill="#1E1B18">
+              <circle cx="94" cy="52" r="3.4"></circle>
+              <circle cx="190" cy="90" r="4.6" fill="#B23A1A" data-thread-event=""></circle>
+              <circle cx="286" cy="128" r="3.4"></circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1040px;width:100%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;color:var(--ink);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.5;">
+        And from that work, something usable comes out.
+      </p>
+    </section>
+
+    <!-- S5 — WOVEN OBJECTS -->
+    <section class="nsjen-room" id="nsjen-s5" data-room="5" data-name="woven objects" data-screen-label="EN S5 Woven Objects" style="min-height:clamp(620px,78vh,900px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;">
+      <div style="max-width:1040px;margin:0 auto;width:100%;">
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-bottom:1.8rem;font-weight:500;text-transform:lowercase;">woven objects</div>
+        <h2 style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.2;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">
+          Woven objects, not products.
+        </h2>
+        <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.6vw,1.4rem);color:var(--text-en-body,var(--text-muted));max-width:48ch;line-height:1.75;margin:2.4rem 0 0;font-weight:300;">
+          A map of exactly where the picture diverged. A two-hour session that rebuilds one version. A one-page brief everyone actually signs — twice, and means it.
+        </p>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:3rem;border-top:1px solid var(--border-hairline);">
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#1E1B18" stroke-width="1.3" opacity=".75"><line x1="0" y1="9" x2="52" y2="9"></line><line x1="0" y1="21" x2="52" y2="21"></line></g><g stroke="#9C938A" stroke-width="1.1" opacity=".7"><line x1="14" y1="2" x2="14" y2="28"></line><line x1="38" y1="2" x2="38" y2="28"></line></g></svg>
+            <div style="flex:1;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.9rem);color:var(--ink);">Maps of competing interpretations</div>
+            <div style="flex:none;font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);font-weight:500;text-transform:lowercase;">evolving</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#1E1B18" stroke-width="1.3" opacity=".75"><line x1="0" y1="15" x2="52" y2="15"></line></g><circle cx="26" cy="15" r="5" fill="none" stroke="#9C938A" stroke-width="1.2"></circle></svg>
+            <div style="flex:1;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.9rem);color:var(--ink);">Assumption-testing tools</div>
+            <div style="flex:none;font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);font-weight:500;text-transform:lowercase;">tested</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#9C938A" stroke-width="1.2" opacity=".7"><line x1="7" y1="3" x2="7" y2="27"></line><line x1="20" y1="3" x2="20" y2="27"></line><line x1="33" y1="3" x2="33" y2="27"></line><line x1="46" y1="3" x2="46" y2="27"></line></g></svg>
+            <div style="flex:1;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.9rem);color:var(--ink);">Facilitation &amp; confrontation sessions</div>
+            <div style="flex:none;font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);font-weight:500;text-transform:lowercase;">forming</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#1E1B18" stroke-width="1.3" opacity=".6"><line x1="0" y1="7" x2="52" y2="7"></line><line x1="0" y1="15" x2="38" y2="15"></line><line x1="0" y1="23" x2="46" y2="23"></line></g></svg>
+            <div style="flex:1;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.35rem,2.2vw,1.9rem);color:var(--ink);">Field briefs &amp; evidence cards</div>
+            <div style="flex:none;font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);font-weight:500;text-transform:lowercase;">evolving</div>
+          </div>
+        </div>
+      </div>
+      <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1040px;width:100%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;color:var(--ink);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.5;">
+        And how do we know it works? We try it in a real meeting.
+      </p>
+    </section>
+
+    <!-- S6 — FIELD & EVIDENCE -->
+    <section class="nsjen-room" id="nsjen-s6" data-room="6" data-name="field and evidence" data-screen-label="EN S6 Field & Evidence" style="min-height:clamp(620px,80vh,920px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;">
+      <div style="max-width:1040px;margin:0 auto;width:100%;">
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-bottom:1.8rem;font-weight:500;text-transform:lowercase;">field &amp; evidence</div>
+        <h2 style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.2;margin:0;font-size:clamp(2.1rem,5vw,4.4rem);max-width:22ch;color:var(--ink);">
+          We thought one map would be enough. It wasn't.
+        </h2>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:3.2rem;">
+          <svg viewBox="0 0 560 84" width="100%" style="max-width:560px;display:block;overflow:visible;" aria-hidden="true">
+            <line x1="12" y1="38" x2="250" y2="38" stroke="#1E1B18" stroke-width="1.8"></line>
+            <line x1="312" y1="38" x2="548" y2="38" stroke="#1E1B18" stroke-width="1.8"></line>
+            <circle cx="281" cy="38" r="4.6" fill="#B23A1A" data-thread-event=""></circle>
+            <text x="281" y="72" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="11" fill="#7B736B">a hypothesis failed, then rebuilt</text>
+          </svg>
+        </div>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:2.2rem;">
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.75;color:var(--ink);max-width:40ch;margin:0;font-weight:300;">We presented the first map the following week. Three of five people objected immediately — a disagreement that never came up in the original meeting. We rewrote it twice before everyone actually agreed. This is what we show — not confidence, but the correction that came before it.</p>
+        </div>
+      </div>
+      <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1040px;width:100%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;color:var(--ink);font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.5;">
+        If this is the work you are looking for, the door is open.
+      </p>
+    </section>
+
+    <!-- S7 — INVITATION -->
+    <section class="nsjen-room" id="nsjen-s7" data-room="7" data-name="together" data-screen-label="EN S7 Together" style="min-height:clamp(520px,68vh,760px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:16vh clamp(28px,9vw,150px) 12vh;position:relative;">
+      <div style="max-width:1040px;margin:0 auto;width:100%;">
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.08em;color:var(--text-annotation);margin-bottom:1.8rem;font-weight:500;text-transform:lowercase;">together</div>
+        <h2 style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.2;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">
+          Does this look familiar?
+        </h2>
+        <div style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:3rem;display:flex;flex-direction:column;">
+          <a href="mailto:hello@nasjstudio.com?subject=A%20problem%20to%20think%20through" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--border-hairline);transition:border-color var(--dur-slow) var(--ease-quiet),padding-inline-start var(--dur-slow) var(--ease-material);" onmouseover="this.style.borderColor='var(--ink)';this.style.paddingInlineStart='10px'" onmouseout="this.style.borderColor='var(--border-hairline)';this.style.paddingInlineStart='0'">
+            <span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);">A meeting ended, and everyone left with a different plan? Tell us.</span>
+          </a>
+          <a href="mailto:hello@nasjstudio.com?subject=Collaborate%20on%20a%20shared%20question" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--border-hairline);transition:border-color var(--dur-slow) var(--ease-quiet),padding-inline-start var(--dur-slow) var(--ease-material);" onmouseover="this.style.borderColor='var(--ink)';this.style.paddingInlineStart='10px'" onmouseout="this.style.borderColor='var(--border-hairline)';this.style.paddingInlineStart='0'">
+            <span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);">A coalition or initiative stalled even though everyone agreed on the words? Let's find where it broke.</span>
+          </a>
+          <a href="mailto:hello@nasjstudio.com?subject=Take%20part%20in%20the%20field" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);transition:border-color var(--dur-slow) var(--ease-quiet),padding-inline-start var(--dur-slow) var(--ease-material);" onmouseover="this.style.borderColor='var(--ink)';this.style.paddingInlineStart='10px'" onmouseout="this.style.borderColor='var(--border-hairline)';this.style.paddingInlineStart='0'">
+            <span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);">Want to see how we actually work? Join a session.</span>
+          </a>
+        </div>
+        <p style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.6vw,1.4rem);color:var(--text-en-body,var(--text-muted));max-width:46ch;line-height:1.75;margin:2.8rem 0 0;font-weight:300;">
+          No sales pitch. One simple diagnostic question: is this what you're dealing with?
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== footer index ===== -->
+    <footer style="position:relative;z-index:1;padding:8vh clamp(28px,9vw,150px) 12vh;border-top:1px solid var(--border-hairline);background:var(--paper);">
+      <div id="nsjen-footer-sentinel" aria-hidden="true" style="height:0;width:100%;"></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem 2.4rem;">
+      <div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;">
+        <span style="font-family:var(--font-display);font-weight:700;font-size:26px;line-height:1;color:var(--ink);">نسج</span>
+        <span style="font-family:var(--font-annotation);font-weight:500;font-size:18px;line-height:1;letter-spacing:0.32em;opacity:0.65;color:var(--ink);">NASJ</span>
+        <span style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.04em;color:var(--text-annotation);text-transform:lowercase;margin-top:8px;">between understanding and action</span>
+      </div>
+      <nav style="display:grid;grid-template-columns:1fr 1fr;gap:.7rem 2.4rem;font-family:var(--font-en-body,var(--font-body));font-size:14px;">
+        <a href="../site.html?page=evidence&amp;lang=en" data-route-page="evidence" data-route-lang="en" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">Evidence</a>
+        <a href="../site.html?page=work&amp;lang=en" data-route-page="work" data-route-lang="en" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">Work</a>
+        <a href="../site.html?page=field&amp;lang=en" data-route-page="field" data-route-lang="en" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">Field</a>
+        <a href="../site.html?page=writing&amp;lang=en" data-route-page="writing" data-route-lang="en" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">Writing</a>
+        <a href="../site.html?page=about&amp;lang=en" data-route-page="about" data-route-lang="en" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">About</a>
+        <a href="../site.html?page=contact&amp;lang=en" data-route-page="contact" data-route-lang="en" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">Contact</a>
+      </nav>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.6rem;margin-top:4.4rem;padding-top:1.8rem;border-top:1px solid var(--border-hairline);">
+        <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;color:var(--annotation-ink);">Cairo, Egypt</span>
+        <a href="mailto:hello@nasjstudio.com" style="font-family:var(--font-annotation);font-style:italic;font-size:16px;color:var(--ink);text-decoration:none;letter-spacing:.01em;">hello@nasjstudio.com</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;threadEvent&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Thread&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const PROD_HOSTS = ['nasjstudio.com', 'www.nasjstudio.com'];
+    if (PROD_HOSTS.includes(location.hostname)) {
+      document.querySelectorAll('a[data-route-page]').forEach(a => {
+        const page = a.getAttribute('data-route-page');
+        const lang = a.getAttribute('data-route-lang');
+        a.href = page === 'home' ? (lang === 'en' ? '/en' : '/') : ('/site.html?page=' + page + '&lang=' + lang);
+      });
+    }
+    const threadEvent = this.props.threadEvent ?? true;
+    const num = ['01','02','03','04','05','06','07'];
+
+    const litFor = (n) => {
+      document.querySelectorAll('.nsjen-knot').forEach(k => {
+        const lit = +k.getAttribute('data-knot') <= n;
+        k.style.backgroundColor = lit ? '#1E1B18' : '#F5F1E8';
+        k.style.borderColor = lit ? '#1E1B18' : '#9C938A';
+      });
+    };
+
+    const applyThread = () => {
+      document.querySelectorAll('[data-thread-event]').forEach(el => {
+        if (el.tagName.toLowerCase() === 'line') el.setAttribute('stroke', threadEvent ? '#B23A1A' : '#1E1B18');
+        else el.setAttribute('fill', threadEvent ? '#B23A1A' : '#1E1B18');
+      });
+    };
+
+    let footerVisible = false;
+    let ticking = false;
+    const updateMarkers = () => {
+      const indexEl = document.getElementById('nsjen-index');
+      const spineEl = document.getElementById('nsjen-spine');
+      const compact = window.innerWidth < 860;
+      const hideMarkers = compact || footerVisible;
+      if (indexEl) indexEl.style.display = hideMarkers ? 'none' : 'block';
+      if (spineEl) spineEl.style.display = hideMarkers ? 'none' : 'flex';
+    };
+    const footerEl = document.getElementById('nsjen-footer-sentinel');
+    if (footerEl && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        footerVisible = entries[0].isIntersecting;
+        updateMarkers();
+      }, { threshold: 0 });
+      io.observe(footerEl);
+      this._io = io;
+    }
+    const evaluate = () => {
+      ticking = false;
+      const vh = window.innerHeight;
+      let active = 1;
+      document.querySelectorAll('.nsjen-room').forEach(room => {
+        const r = room.getBoundingClientRect();
+        const n = +room.getAttribute('data-room');
+        if (r.top <= vh * 0.5) active = Math.max(active, n);
+      });
+      litFor(active);
+      applyThread();
+      const indexEl = document.getElementById('nsjen-index');
+      if (indexEl) {
+        const room = document.querySelector('.nsjen-room[data-room="' + active + '"]');
+        const rawName = room ? room.getAttribute('data-name') : '';
+        const titleName = rawName ? rawName.replace(/\b\w/g, c => c.toUpperCase()) : '';
+        indexEl.innerHTML = '<span style="color:var(--ink);font-weight:700;">' + num[active-1] + '</span> / 07<br>' + titleName;
+      }
+      updateMarkers();
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(evaluate); } };
+
+    const applyResponsive = () => {
+      const w = window.innerWidth;
+      const nav = document.getElementById('nsjen-nav');
+      const grid = document.getElementById('nsjen-loom-grid');
+      if (nav) nav.style.display = w < 620 ? 'none' : 'flex';
+      if (grid) grid.style.gridTemplateColumns = w < 820 ? '1fr' : '1.15fr .85fr';
+      updateMarkers();
+    };
+
+    applyResponsive();
+    evaluate();
+    let n = 0;
+    const poll = setInterval(() => { applyResponsive(); evaluate(); if (++n > 8) clearInterval(poll); }, 260);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const onResize = () => { applyResponsive(); onScroll(); };
+    window.addEventListener('resize', onResize);
+    this._cleanup = () => { clearInterval(poll); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize); if (this._io) this._io.disconnect(); };
+  }
+  componentWillUnmount() { if (this._cleanup) this._cleanup(); }
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>

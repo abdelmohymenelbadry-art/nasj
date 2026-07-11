@@ -1,0 +1,39 @@
+/* NASJ — Spacing, grid, radius, motion
+ * Scale: 8 16 24 40 64 96 160. The loom grid is structural, not visible.
+ * Motion is slow, material, quiet — opacity and translation only.
+ */
+:root {
+  /* — Spacing scale — */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 64px;
+  --space-6: 96px;
+  --space-7: 160px;
+
+  /* — Grid (the loom) — */
+  --grid-cols-desktop: 12; /* @kind other */
+  --grid-cols-mobile: 4; /* @kind other */
+  --grid-gutter: var(--space-3);
+  --grid-margin: var(--space-5);
+  --measure: 68ch;          /* comfortable reading measure */
+
+  /* — Radius — nearly none; paper edges are cut, not rounded — */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+
+  /* — Hairlines & rules — */
+  --rule-hairline: 1px;
+  --rule-thread: 1.5px;
+
+  /* — Motion — slow, material, quiet — */
+  --ease-material: cubic-bezier(0.22, 0.61, 0.36, 1); /* @kind other */
+  --ease-quiet: cubic-bezier(0.4, 0.0, 0.2, 1); /* @kind other */
+  --dur-quick: 240ms; /* @kind other */
+  --dur-slow: 520ms; /* @kind other */
+  --dur-slower: 820ms; /* @kind other */
+  --motion-fade: opacity var(--dur-slow) var(--ease-quiet);
+  --motion-rise: transform var(--dur-slow) var(--ease-material), opacity var(--dur-slow) var(--ease-quiet);
+}

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/colors.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/typography.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/styles.css">
+<script src="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/_ds_bundle.js"></script>
+<style>
+  html{scroll-behavior:smooth;background:var(--paper);}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  ::selection{background:rgba(30,27,24,0.10);color:var(--ink);}
+  .nsjc-navlink{background:none;border:0;cursor:pointer;font-family:var(--font-body);font-size:14px;letter-spacing:.01em;color:var(--text-muted);padding:0;transition:color 520ms cubic-bezier(.4,0,.2,1);}
+  .nsjc-navlink:hover{color:var(--ink);}
+  .nsjc-langbtn{background:none;border:0;cursor:pointer;font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);padding:0;transition:color 520ms cubic-bezier(.4,0,.2,1);}
+  .nsjc-langbtn:hover{color:var(--ink);}
+  .nsjc-page{animation:nsjcRise 620ms cubic-bezier(.22,.61,.36,1) both;}
+  @keyframes nsjcRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .nsjc-entry{display:block;text-decoration:none;color:inherit;border-bottom:1px solid var(--border-hairline);padding:1.6rem 0;transition:padding 520ms cubic-bezier(.22,.61,.36,1),border-color 520ms cubic-bezier(.4,0,.2,1);}
+  .nsjc-entry:hover{border-color:var(--thread);padding-inline-start:12px;}
+  @media (prefers-reduced-motion: reduce){.nsjc-page{animation:none!important}.nsjc-entry:hover{padding-inline-start:0!important}}
+</style>
+</helmet>
+
+<div id="nsjc-root" dir="rtl" lang="ar" style="position:relative;font-family:var(--font-body);min-height:100vh;--thread:var(--ink);--thread-line:var(--ink);--thread-deep:var(--ink);--accent:var(--ink);--accent-hover:var(--ink);--accent-wash:rgba(30,27,24,0.10);--thread-tint:rgba(30,27,24,0.06);--focus-ring:var(--ink);--spark:var(--ink);">
+
+  <!-- ===================== NAV SHELL ===================== -->
+  <header id="nsjc-nav" style="position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--border-hairline);">
+    <div style="max-width:1120px;margin:0 auto;padding:15px clamp(20px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <a href="index.html" data-route-page="home" data-route-lang="ar" title="العودة إلى البيان" style="display:inline-flex;align-items:baseline;gap:11px;text-decoration:none;flex:none;">
+        <span style="font-family:var(--font-display);font-weight:700;font-size:22px;line-height:1;color:var(--ink);">نسج</span>
+        <span style="font-family:var(--font-annotation);font-weight:500;font-size:13px;line-height:1;letter-spacing:.30em;opacity:.62;color:var(--ink);">NASJ</span>
+      </a>
+      <nav id="nsjc-navbar" data-navwrap="1" style="display:flex;flex-wrap:wrap;gap:clamp(11px,1.6vw,22px);align-items:center;">
+        <button class="nsjc-navlink" data-nav="evidence"><span data-t="evidence">الشاهد</span></button>
+        <button class="nsjc-navlink" data-nav="work"><span data-t="work">الأعمال</span></button>
+        <button class="nsjc-navlink" data-nav="field"><span data-t="field">الميدان</span></button>
+        <button class="nsjc-navlink" data-nav="writing"><span data-t="writing">الكتابة</span></button>
+        <button class="nsjc-navlink" data-nav="about"><span data-t="about">عن الاستوديو</span></button>
+        <button class="nsjc-navlink" data-nav="contact"><span data-t="contact">تواصل</span></button>
+      </nav>
+      <div style="display:flex;align-items:center;gap:14px;flex:none;">
+        <button class="nsjc-langbtn" data-lang-set="ar">العربية</button>
+        <span aria-hidden="true" style="width:1px;height:14px;background:var(--border-hairline);"></span>
+        <button class="nsjc-langbtn" data-lang-set="en">English</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="nsjc-main" style="position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 clamp(20px,6vw,80px);min-height:70vh;">
+
+    <!-- ========================================================= -->
+    <!-- ======================= ARABIC ========================== -->
+    <!-- ========================================================= -->
+
+    <!-- ---------- الأعمال ---------- -->
+    <section class="nsjc-page" data-page="work" data-lang="ar" data-screen-label="AR Work">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--thread);">02</span><span style="font-family:var(--font-body);font-size:13px;letter-spacing:.03em;color:var(--text-annotation);">الأعمال</span></div>
+        <h1 style="font-family:var(--font-display);font-weight:700;line-height:1.34;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">الأعمال</h1>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--text-muted);max-width:44ch;line-height:1.75;margin:2rem 0 0;">لا سِجلّ إنجازات، بل أدلّة على ما تغيّر فعلاً بعد أن دخلنا الغرفة. كل عملٍ هنا اختبارٌ واحد: هل صار الفهم قابلاً للفعل أم لا؟</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+      <div style="padding:2vh 0 5vh;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:.6rem;">ما تنسجه نسج</div>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.75;color:var(--text-muted);max-width:60ch;margin:0 0 1.8rem;">أربعة أشكالٍ تتكرّر تحت كل عمل — لا خدماتٌ تُختار من قائمة، بل بنيةٌ واحدة تأخذ صورًا مختلفة بحسب الموقف.</p>
+        <div style="border-top:1.5px solid var(--thread);">
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,1.8vw,1.4rem);color:var(--ink);">التوليف الميداني</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">نجمع ما هو متناثر بين تقارير وخبرات وشهادات مختلفة، ونكتبها في صورةٍ واحدة يقدر فريقٌ آخر أن يستعملها فورًا. <span style="color:var(--text-annotation);">يُنتج: موجزات معرفية · خرائط مصادر</span></p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,1.8vw,1.4rem);color:var(--ink);">أُطر ونماذج</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">نحوّل موقفًا ملتبسًا إلى أداةٍ تصمد حين يُختبر بها قرارٌ حقيقي، لا إلى تصنيفٍ يُطمئن دون أن يُفسّر. <span style="color:var(--text-annotation);">يُنتج: أطر · نماذج مفاهيمية</span></p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,1.8vw,1.4rem);color:var(--ink);">أدوات تشخيص</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">نصوغ ما نتعلّمه في أدواتٍ يأخذها غيرنا فيستعملها لقراءة موقفه، دون شرحٍ من صاحبها. <span style="color:var(--text-annotation);">يُنتج: أدوات قراءة موقف · عُدد تشخيص</span></p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,1.8vw,1.4rem);color:var(--ink);">استوديوهات وجلسات</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">نصمّم كيف يتكوّن الفهم داخل الغرفة نفسها، لا كيف يُلقى المحتوى على من فيها — ونبقى فيها لنرى هل يصمد أمام أشخاصٍ حقيقيين لا يتصرّفون كما خُطِّط لهم. <span style="color:var(--text-annotation);">يُنتج: بنى مشاركة · تجارب تعلّم</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:0 0 6vh;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:.6rem;">مُختارات</div>
+
+        <div class="nsjc-entry" style="border-top:1.5px solid var(--thread);cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--ink);max-width:36ch;">أمسية الأسئلة الجماعية</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">دراسة حالة · مُثبَتة بالشاهد</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:62ch;">اختبارٌ صُمِّم ليكسر المشاركة عن قصد — بنزع ما يُظنّ أنها تقوم عليه: الأسئلة الجيدة نفسها.</p>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.8rem 1.6rem;margin:1.4rem 0 1.6rem;padding-top:1rem;border-top:1px solid var(--border-hairline);">
+            <div><div style="font-family:var(--font-body);font-size:11px;color:var(--text-annotation);">المنهج المُختبَر</div><div style="font-family:var(--font-body);font-size:14px;color:var(--ink);margin-top:.3rem;">نسيجة مشاركة · خمس مراحل</div></div>
+            <div><div style="font-family:var(--font-body);font-size:11px;color:var(--text-annotation);">المشاركون</div><div style="font-family:var(--font-body);font-size:14px;color:var(--ink);margin-top:.3rem;">9–12 في الجلسة</div></div>
+            <div><div style="font-family:var(--font-body);font-size:11px;color:var(--text-annotation);">السياق</div><div style="font-family:var(--font-body);font-size:14px;color:var(--ink);margin-top:.3rem;">طاولاتٌ متناوبة · تيسيرٌ مشترك</div></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem 2rem;">
+            <div><div style="font-family:var(--font-body);font-size:11px;color:var(--text-annotation);margin-bottom:.4rem;">المشكلة</div><p style="font-family:var(--font-body);font-weight:300;font-size:14px;line-height:1.65;color:var(--ink);margin:0;">تنهار أكثر تجارب التعلّم حين تتراجع جودة المحتوى.</p></div>
+            <div><div style="font-family:var(--font-body);font-size:11px;color:var(--text-annotation);margin-bottom:.4rem;">الإعداد</div><p style="font-family:var(--font-body);font-weight:300;font-size:14px;line-height:1.65;color:var(--ink);margin:0;">أُبدلت الأسئلة الجيدة بأسئلةٍ سطحيةٍ قابلةٍ للاستغناء عنها.</p></div>
+            <div><div style="font-family:var(--font-body);font-size:11px;color:var(--text-annotation);margin-bottom:.4rem;">ما ظهر</div><p style="font-family:var(--font-body);font-weight:300;font-size:14px;line-height:1.65;color:var(--ink);margin:0;">انزِع الأسئلة، وتبقى نسيجة المشاركة قائمةً كما هي — الأثر لم يكن في المحتوى، بل في البنية تحته.</p></div>
+          </div>
+        </div>
+
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=استفسار عن إطار">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.4rem,2.6vw,2rem);color:var(--ink);max-width:32ch;">إطارٌ لقراءة السردية الجامعة</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">إطار · قيد النسج</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">أداةٌ حيّة تُعدَّل كل مرة تفشل فيها مع فريقٍ حقيقي — لا مُنتَجٌ يُعرَض على رفّ.</p>
+        </a>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">محجوز</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;">من بينها قرارٌ مؤسسيٌّ أُعيد بناء الاتفاق حوله تحت ضغطٍ حقيقيّ — يُفتَح حين ينضج شاهدُه. المعمار مُهيّأ لأعمالٍ أخرى من اليوم.</span>
+        </div>
+      </div>
+
+      <div style="padding:0 0 7vh;">
+        <a href="#" data-nav="contact" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.4rem 0;border-top:1.5px solid var(--thread);transition:padding-inline-start 520ms cubic-bezier(.22,.61,.36,1);" onmouseover="this.style.paddingInlineStart='12px'" onmouseout="this.style.paddingInlineStart='0'">
+          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--ink);">عندك مشكلةٌ تشبه هذه؟ احملها إلينا</span>
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">→ تواصل</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- الميدان ---------- -->
+    <section class="nsjc-page" data-page="field" data-lang="ar" data-screen-label="AR Field" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--thread);">03</span><span style="font-family:var(--font-body);font-size:13px;letter-spacing:.03em;color:var(--text-annotation);">الميدان</span></div>
+        <h1 style="font-family:var(--font-display);font-weight:700;line-height:1.34;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">الميدان</h1>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--text-muted);max-width:46ch;line-height:1.75;margin:2rem 0 0;">حيث نرى أين ولماذا يتوقّف الفهم عن العمل — فرضيةٌ انهارت، أداةٌ تغيّرت، سؤالٌ لم يصمد. ملاحظاتٌ وتجاربُ وشهاداتٌ من الخبرة المعيشة.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:2vh 0 6vh;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:.6rem;">دفتر الميدان</div>
+        <div class="nsjc-entry" style="border-top:1.5px solid var(--thread);cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--ink);max-width:40ch;">حين لا يكفي أن يكون الفهم صحيحًا</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">ملاحظة ميدانية · 14</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">الفهم الذي يبقى في رأس شخصٍ واحد يصمد هناك، ويتفكّك أول ما يصل إلى أربعة آخرين.</p>
+        </div>
+        <div class="nsjc-entry" style="cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--ink);max-width:40ch;">أين يبدأ الفهم في الانهيار؟</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">تجربة · قيد النسج</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">نوثّق نقطة الانهيار لا لنُخفيها، بل لأنها تكشف حدود ما فهمناه فعلًا.</p>
+        </div>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">يتراكم</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;">دفترٌ يطول مع كل نزولٍ إلى الميدان. يُنشَر حين ينضج، لا حين يحين موعده.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- الكتابة ---------- -->
+    <section class="nsjc-page" data-page="writing" data-lang="ar" data-screen-label="AR Writing" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--thread);">04</span><span style="font-family:var(--font-body);font-size:13px;letter-spacing:.03em;color:var(--text-annotation);">الكتابة</span></div>
+        <h1 style="font-family:var(--font-display);font-weight:700;line-height:1.34;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">الكتابة</h1>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--text-muted);max-width:46ch;line-height:1.75;margin:2rem 0 0;">كل نصٍّ هنا نتج عن اجتماعٍ لم يسِر كما خُطِّط له، أو أداةٍ فشلت أول مرة استُخدمت — مقالاتٌ وموجزاتٌ وملاحظاتُ بحث.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:2vh 0 6vh;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:.6rem;">المقروء</div>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=الكتابة" style="border-top:1.5px solid var(--thread);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);max-width:38ch;">لماذا لا تُنتِج المعلومات فهمًا</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">مقال · 2026</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">كتبناه بعد اجتماعٍ خرج منه خمسة أشخاص متأكدين أنهم اتفقوا — وكانوا مخطئين.</p>
+          <p style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);margin:.9rem 0 0;">→ اطلب نسخة عبر البريد</p>
+        </a>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=موجز">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);max-width:38ch;">موجز: العلاقات بوصفها بنية</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">موجز · قيد النسج</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">كتبناه بعد أن انهارت خطةٌ بدت متماسكة على الورق، لأن لا أحد نظر إلى العلاقة بين أجزائها.</p>
+          <p style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);margin:.9rem 0 0;">→ اطلب إشعارًا عند النشر</p>
+        </a>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">قادم</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;">ملاحظات بحثٍ واستكشافاتٌ مفاهيمية تُضاف حين تنضج.</span>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- ---------- الشاهد ---------- -->
+    <section class="nsjc-page" data-page="evidence" data-lang="ar" data-screen-label="AR Evidence" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--thread);">01</span><span style="font-family:var(--font-body);font-size:13px;letter-spacing:.03em;color:var(--text-annotation);">الشاهد</span></div>
+        <h1 style="font-family:var(--font-display);font-weight:700;line-height:1.34;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">الشاهد</h1>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--text-muted);max-width:48ch;line-height:1.75;margin:2rem 0 0;">طبقة الأدلّة التي يُبنى عليها القرار — بانضباطين: ماذا نعرض، وكيف نتحقّق.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:2vh 0 6vh;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:.6rem;">انضباط الشاهد</div>
+        <div class="nsjc-entry" style="border-top:1.5px solid var(--thread);cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--ink);max-width:40ch;">التفكير معروضٌ، لا النتائج وحدها</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">مبدأ · 01</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">نُظهر كيف وصلنا إلى الفهم لا خلاصته فقط، فيصير الشاهد قابلًا للفحص وإعادة النسج.</p>
+        </div>
+        <div class="nsjc-entry" style="cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--ink);max-width:40ch;">التحقّق: ما يصمد بعد أن مزّقه الواقع</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">مبدأ · 02</span>
+          </div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.7;color:var(--text-muted);margin:.7rem 0 0;max-width:60ch;">لا نثق بما لم يُختبَر في الميدان؛ الشاهد يُمتحَن بالضغط والخلاف، ويُعاد نسجه حين يتمزّق.</p>
+        </div>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">يتراكم</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;">طبقةٌ تنمو مع كل عمل. تُفتَح الشواهد المفردة حين ينضج كلٌّ منها — والمعمار مُهيّأ لها من اليوم.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- عن الاستوديو ---------- -->
+    <section class="nsjc-page" data-page="about" data-lang="ar" data-screen-label="AR About" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--thread);">05</span><span style="font-family:var(--font-body);font-size:13px;letter-spacing:.03em;color:var(--text-annotation);">عن الاستوديو</span></div>
+        <h1 style="font-family:var(--font-display);font-weight:700;line-height:1.34;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">عن الاستوديو</h1>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.15rem,2vw,1.6rem);color:var(--ink);max-width:52ch;line-height:1.8;margin:2.4rem 0 0;">نسج فريقٌ يدخل الغرفة بعد أن ينفضّ الاجتماع، ويسأل كلّ شخصٍ فيها سؤالاً واحدًا: ماذا فهمتَ أنت تحديدًا؟ ثم يبني من الإجابات نسخةً واحدة يقدر الجميع أن يتصرّف بها.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:3vh 0 3vh;max-width:64ch;">
+        <div style="margin:0 0 3rem;"><x-import component-from-global-scope="NASJDesignSystem_1ee8d7.PullQuote" cite="أطروحة الاستوديو" hint-size="100%,130px">لا نجمع معلوماتٍ أكثر. نكتب الإجابات المتناقضة جنبًا إلى جنب حتى تصير قابلةً للفعل.</x-import></div>
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:1rem;">دورنا</div>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.8;color:var(--ink);margin:0 0 2.4rem;">لا نملك المعرفة، ولا ننوب عن أصحابها. نقرّر أي إجابةٍ تدخل الصورة النهائية وأيّها تُترك — وهذا قرارٌ نتحمّل مسؤوليته صراحةً.</p>
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:1rem;">مبادئ التشغيل</div>
+        <ol style="list-style:none;counter-reset:p;padding:0;margin:0;border-top:1.5px solid var(--thread);">
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">01</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">نبدأ بسؤال كلّ شخصٍ في الغرفة قبل أن نقترح أي حل.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">02</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">نعرض كيف وصلنا للنتيجة، لا النتيجة وحدها؛ نقول أين اختلفت الإجابات ولماذا.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">03</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">ما يصمد بعد أن يعترض عليه ثلاثةٌ من خمسة، هو وحده ما يستحقّ الثقة.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">04</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">كل أداةٍ ننتجها قابلة للإلغاء؛ إن توقّفت عن مساعدة فريقٍ على التصرّف، نتخلّى عنها.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">05</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">لا نملك الكلمة الأخيرة؛ ما يحدث فعلاً في الغرفة بعدنا هو الذي يقرّر.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">06</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">حين يختلف اثنان في نفس الغرفة، لا نصوّت لإنهاء الخلاف؛ نكتب كلا الموقفين ونستمر.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">07</span><span style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">القدرة على التصرّف الجماعي تُبنى في تلك الغرفة، لا تُكتشف جاهزةً فيها.</span></li>
+        </ol>
+
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin:2.6rem 0 1rem;">كيف نعمل</div>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.75;color:var(--text-muted);margin:0 0 1.6rem;max-width:60ch;">ثلاثة أنماط تدخّل، تُستدعى حسب ما يحدث فعلاً في الغرفة، لا حسب قائمة خدمات ثابتة.</p>
+        <div style="border-top:1.5px solid var(--thread);">
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);">نمطٌ سرديّ</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">حين يخرج خمسة أشخاص من نفس الاجتماع بخمس رواياتٍ مختلفة عمّا حدث فيه.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);">نمطُ مشاركة</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">حين تحتاج مجموعة أن تبني الفهم معًا في الغرفة، لا أن تستقبله جاهزًا من شخصٍ واحد.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);">نمطٌ معرفيّ</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">حين تكون الأبحاث والتقارير موجودة على الرفّ، ولا أحد يرجع لها بعد أول اجتماع.</p>
+          </div>
+        </div>
+      </div>
+
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+      <div style="padding:1vh 0 4vh;max-width:64ch;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:1.4rem;">الموقع</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);">
+          <div>
+            <div style="font-family:var(--font-body);font-size:12px;color:var(--text-annotation);margin-bottom:.8rem;">أقرب إلى</div>
+            <div style="border-top:1.5px solid var(--thread);">
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink);">المراصد الميدانية</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink);">دفاتر الملاحظة الحيّة</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink);">الأرشيفات التي تُراجَع لا تُحفظ فقط</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--ink);">البنى التي تحمل قرارًا جماعيًّا</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-body);font-size:12px;color:var(--text-annotation);margin-bottom:.8rem;">أبعد عن</div>
+            <div style="border-top:1.5px solid var(--thread);">
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--text-annotation);">الوكالات</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--text-annotation);">الاستشارات</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--text-annotation);">دُور النشر</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-display);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--text-annotation);">استوديوهات الهوية التجارية</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family:var(--font-body);font-size:12px;color:var(--text-annotation);margin:2.6rem 0 1rem;">ما لا تنسجه نسج</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 14px;">
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">الحملات التسويقية</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">المحتوى الترويجي</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">الهوية التجارية</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">صفحات الهبوط</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">سرديات النموّ</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">لغة الابتكار</span>
+        </div>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);margin:1.8rem 0 0;max-width:56ch;">كلُّ ما يُنتج الانتباه دون أن يُنتج الفهم يقع خارج حدود نسج.</p>
+
+        <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+        <div style="margin-top:1vh;">
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--text-annotation);margin-bottom:.4rem;">شرطان يحملان النسيج</div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:15px;line-height:1.75;color:var(--text-muted);margin:0 0 1.6rem;max-width:60ch;">ليسا خدمتين، بل شرطين؛ يزداد احتمال أن يحمل الفهم وزنه حين يجتمعان. كلُّ شرطٍ له حُجرةٌ يسكنها في هذا الموقع.</p>
+          <div style="border-top:1.5px solid var(--thread);">
+                        <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+              <div><span style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);">بنيةٌ مشتركة</span><br><a href="#" data-nav="work" style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);text-decoration:none;">→ الأعمال</a></div>
+              <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">الفهم ينهار حين لا تُسأل كلّ الأطراف؛ نفس الاجتماع، خمس صور مختلفة، ولا أحد كتبها جنبًا إلى جنب.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+              <div><span style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);">ممارسةٌ مشتركة</span><br><a href="#" data-nav="field" style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);text-decoration:none;">→ الميدان</a></div>
+              <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.7;color:var(--ink);margin:0;">ما لا يدخل الممارسة لا يدخل الذاكرة الجماعية.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="max-width:60ch;padding:2vh 0;">
+        <div style="height:1px;background:var(--border-hairline);"></div>
+        <div style="margin-top:3vh;">
+          <div style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);margin-bottom:1.4rem;">من يقف وراء نسج؟</div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-muted);margin:0 0 1rem;">بدأ نسج من ملاحظة تكررت في غرفٍ مختلفة: فرق، وتحالفات، ومبادرات، تنتهي إلى اللحظة نفسها.</p>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-muted);margin:0 0 1rem;">اتفاقٌ ظاهري يخفي صورًا متعددة لما قيل وما اتُّفق عليه.</p>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-muted);margin:0 0 2.2rem;">لم يكن ينقص تلك الغرف الذكاء ولا النية، بل شيء أكثر بساطة: أن يعود أحدٌ إلى الاجتماع نفسه، ويسأل كل شخص فيه السؤال نفسه، ثم يضع الإجابات جنبًا إلى جنب.</p>
+
+          <div style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);margin-top:40px;margin-bottom:.3rem;">يقف وراء نسج:</div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,2.7vw,2.15rem);color:var(--ink);margin-bottom:.6rem;">عبدالمهيمن إسماعيل</div>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-muted);margin:0 0 1.6rem;">باحث ومصمم تعلم يعمل عند تقاطع الاقتصاد السياسي والتنظيم الاجتماعي وتصميم المعرفة.</p>
+
+          <p style="font-family:var(--font-display);font-style:italic;font-weight:600;font-size:clamp(.95rem,1.4vw,1.12rem);line-height:1.7;color:var(--ink);margin:0 0 1rem;">من هنا وُلد نسج — ليس مشروعًا جانبيًا، بل استوديو مكرس للسؤال نفسه:<br>كيف يمكن لمجموعة من الناس أن ترى الواقع نفسه، قبل أن تحاول تغييره؟</p>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-muted);margin:0;">هذا العمل يحتاج انضباطًا لا يحتمله شخص يعمل عليه بين مهام أخرى.</p>
+        </div>
+        <div style="margin-top:3vh;height:1px;background:var(--border-hairline);"></div>
+      </div>
+
+      <div style="padding:0 0 7vh;">
+        <a href="#" data-nav="contact" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:2.6rem;padding:1.4rem 0;border-top:1.5px solid var(--thread);border-bottom:1px solid var(--border-hairline);transition:padding-inline-start 520ms cubic-bezier(.22,.61,.36,1);" onmouseover="this.style.paddingInlineStart='12px'" onmouseout="this.style.paddingInlineStart='0'">
+          <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--ink);">إن كانت هذه طريقة العمل التي تبحث عنها</span>
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">→ تواصل</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- تواصل ---------- -->
+    <section class="nsjc-page" data-page="contact" data-lang="ar" data-screen-label="AR Contact" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--thread);">06</span><span style="font-family:var(--font-body);font-size:13px;letter-spacing:.03em;color:var(--text-annotation);">تواصل</span></div>
+        <h1 style="font-family:var(--font-display);font-weight:700;line-height:1.34;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">ادخلْ من حيث يناسبك</h1>
+        <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(1.15rem,2vw,1.6rem);color:var(--text-muted);max-width:44ch;line-height:1.75;margin:2rem 0 0;">لا مكالمات بيع، ولا استعجال. محادثةٌ تبدأ حين تكون مستعدًّا.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+      <div style="padding:2vh 0 4vh;max-width:66ch;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:1.2rem;">متى يبدأ التعاون</div>
+        <div style="border-top:1.5px solid var(--thread);">
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.65;color:var(--ink);">حين تصبح المشكلة أكبر من البنية التي اعتادت حملها.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.65;color:var(--ink);">حين تضيق المشاركة إلى صوتٍ واحد، أو تخفت إلى لا صوت.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.65;color:var(--ink);">حين تكون الأبحاث والتقارير موجودة، ولا أحد يقدر أن يتصرّف بها معًا.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.65;color:var(--ink);">حين يحتاج برنامجٌ أو مؤسسةٌ بنيةً تصمد أمام تبدّل الناس والأيام الصعبة.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.65;color:var(--ink);">حين يكون على جماعةٍ أن تقرّر معًا في أمرٍ متنازَعٍ دون أن تتصدّع.</div>
+        </div>
+      </div>
+
+      <div style="padding:0 0 4vh;display:flex;flex-direction:column;">
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=مشكلة لنفكّر فيها معًا" style="border-top:1.5px solid var(--thread);"><span style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);">احملْ إلينا مشكلة، لنفكّر فيها معًا</span></a>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=تعاون حول سؤال مشترك"><span style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);">تعاوَن معنا، حول سؤالٍ مشترك</span></a>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=المشاركة في الميدان"><span style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);color:var(--ink);">شارِك في الميدان، تعلّمًا ومساهمة</span></a>
+      </div>
+
+      <div style="padding:0 0 6vh;max-width:66ch;">
+        <div style="font-family:var(--font-body);font-size:12px;letter-spacing:.03em;color:var(--text-annotation);margin-bottom:1.2rem;">كيف يتطوّر التعاون</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;">
+          <div style="border-top:1.5px solid var(--thread);padding-top:1rem;">
+            <div style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);margin-bottom:.4rem;">01</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;">أوّل خيط</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:13.5px;line-height:1.6;color:var(--text-muted);margin:0;">محادثةٌ محدودة تجعل الموقف مقروءًا قبل أن يُبنى عليه ما هو أكبر.</p>
+          </div>
+          <div style="border-top:1px solid var(--border-hairline);padding-top:1rem;">
+            <div style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);margin-bottom:.4rem;">02</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;">تعمّق</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:13.5px;line-height:1.6;color:var(--text-muted);margin:0;">نبني الأطر والأدوات وبنية المشاركة استنادًا لما ظهر في أول خيط.</p>
+          </div>
+          <div style="border-top:1px solid var(--border-hairline);padding-top:1rem;">
+            <div style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);margin-bottom:.4rem;">03</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem;">مصاحبة ممتدّة</div>
+            <p style="font-family:var(--font-body);font-weight:300;font-size:13.5px;line-height:1.6;color:var(--text-muted);margin:0;">نصون النسيجة ونعيد حياكتها مع الميدان عبر الزمن، لا نسلّمها وننصرف.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ================= ENGLISH (orientation) ================= -->
+    <!-- ========================================================= -->
+
+    <!-- EN Work -->
+    <section class="nsjc-page" data-page="work" data-lang="en" dir="ltr" data-screen-label="EN Work" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-annotation);font-style:italic;font-size:1.2rem;color:var(--thread);">02</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.06em;text-transform:lowercase;color:var(--text-annotation);">work</span></div>
+        <h1 style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.12;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">Work</h1>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.7vw,1.35rem);color:var(--text-en-body,var(--text-muted));max-width:52ch;line-height:1.8;margin:1.8rem 0 0;">An orientation, not a portfolio. Each engagement is evidence of understanding that held its weight when it was time to act — cases, frameworks and living tools maintained with the field.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+      <div style="padding:2vh 0 5vh;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:.6rem;text-transform:lowercase;">what nasj weaves</div>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.8;color:var(--text-en-body,var(--text-muted));max-width:62ch;margin:0 0 1.8rem;">Four forms recur under every engagement — not services picked from a menu, but one structure taking different shapes to fit the situation.</p>
+        <div style="border-top:1.5px solid var(--thread);">
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.2rem,1.8vw,1.5rem);color:var(--ink);">Field synthesis</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">We trace what is scattered across complex systems — reports, lived experience, evidence — and weave it into a form others can use. <span style="color:var(--text-annotation);">Produces: knowledge briefs · source maps</span></p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.2rem,1.8vw,1.5rem);color:var(--ink);">Frameworks &amp; models</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">We turn an ambiguous field into a structure that organises understanding and holds under the pressure of reality — not a taxonomy that reassures without explaining. <span style="color:var(--text-annotation);">Produces: frameworks · conceptual models</span></p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.2rem,1.8vw,1.5rem);color:var(--ink);">Diagnostic tools</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">We put what we learn into tools others can pick up and use to read their own situation, without the author standing over their shoulder. <span style="color:var(--text-annotation);">Produces: situation-reading tools · diagnostic kits</span></p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.2rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.2rem,1.8vw,1.5rem);color:var(--ink);">Studios &amp; sessions</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">We design how collective understanding forms, not how content gets delivered — and hold the room so it survives a real group whose behaviour can't be scripted. <span style="color:var(--text-annotation);">Produces: participation structures · learning experiences</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:0 0 6vh;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:.6rem;text-transform:lowercase;">selected</div>
+
+        <div class="nsjc-entry" style="border-top:1.5px solid var(--thread);cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--ink);max-width:36ch;">An evening of collective questions</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Case study · evidenced</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:62ch;">A test designed to break participation on purpose — by removing what is assumed to hold it up: good questions themselves.</p>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.8rem 1.6rem;margin:1.4rem 0 1.6rem;padding-top:1rem;border-top:1px solid var(--border-hairline);">
+            <div><div style="font-family:var(--font-en-body,var(--font-body));font-size:11px;color:var(--text-annotation);">Method tested</div><div style="font-family:var(--font-en-body,var(--font-body));font-size:14px;color:var(--ink);margin-top:.3rem;">Five-stage participation structure</div></div>
+            <div><div style="font-family:var(--font-en-body,var(--font-body));font-size:11px;color:var(--text-annotation);">Participants</div><div style="font-family:var(--font-en-body,var(--font-body));font-size:14px;color:var(--ink);margin-top:.3rem;">9–12 per session</div></div>
+            <div><div style="font-family:var(--font-en-body,var(--font-body));font-size:11px;color:var(--text-annotation);">Setting</div><div style="font-family:var(--font-en-body,var(--font-body));font-size:14px;color:var(--ink);margin-top:.3rem;">Rotating tables · shared facilitation</div></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem 2rem;">
+            <div><div style="font-family:var(--font-en-body,var(--font-body));font-size:11px;color:var(--text-annotation);margin-bottom:.4rem;">The problem</div><p style="font-family:var(--font-en-body,var(--font-body));font-size:14px;line-height:1.65;color:var(--ink);margin:0;">Most learning experiences collapse once the quality of the content drops.</p></div>
+            <div><div style="font-family:var(--font-en-body,var(--font-body));font-size:11px;color:var(--text-annotation);margin-bottom:.4rem;">The setup</div><p style="font-family:var(--font-en-body,var(--font-body));font-size:14px;line-height:1.65;color:var(--ink);margin:0;">Good questions were swapped for shallow, disposable ones.</p></div>
+            <div><div style="font-family:var(--font-en-body,var(--font-body));font-size:11px;color:var(--text-annotation);margin-bottom:.4rem;">What emerged</div><p style="font-family:var(--font-en-body,var(--font-body));font-size:14px;line-height:1.65;color:var(--ink);margin:0;">Strip the questions out, and the participation structure held all the same — the effect was never in the content, but in the structure beneath it.</p></div>
+          </div>
+        </div>
+
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=Enquiry%20about%20a%20framework">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--ink);max-width:32ch;">A framework for reading the unifying narrative</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Framework · in the loom</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">A living tool maintained and rewoven with the field — not a product placed on a shelf.</p>
+        </a>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">reserved</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;">Among them, an institutional decision where consensus was rebuilt under real pressure — it opens once its evidence matures. The architecture is ready for other work today.</span>
+        </div>
+      </div>
+
+      <div style="padding:0 0 7vh;">
+        <a href="#" data-nav="contact" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1.4rem 0;border-top:1.5px solid var(--thread);transition:padding-inline-start 520ms cubic-bezier(.22,.61,.36,1);" onmouseover="this.style.paddingInlineStart='12px'" onmouseout="this.style.paddingInlineStart='0'">
+          <span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.3rem,2vw,1.7rem);color:var(--ink);">Have a problem like this one? Bring it to us</span>
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">→ contact</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- EN Field -->
+    <section class="nsjc-page" data-page="field" data-lang="en" dir="ltr" data-screen-label="EN Field" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-annotation);font-style:italic;font-size:1.2rem;color:var(--thread);">03</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.06em;text-transform:lowercase;color:var(--text-annotation);">field</span></div>
+        <h1 style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.12;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">Field</h1>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.7vw,1.35rem);color:var(--text-en-body,var(--text-muted));max-width:52ch;line-height:1.8;margin:1.8rem 0 0;">Where reality tears the weave and we see where and why — a hypothesis collapsed, a tool changed, a question didn't hold. Notes, experiments and testimony from lived experience.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:2vh 0 6vh;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:.6rem;text-transform:lowercase;">field notebook</div>
+        <div class="nsjc-entry" style="border-top:1.5px solid var(--thread);cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--ink);max-width:40ch;">When being right isn't enough</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Field note · 14</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">Understanding that isn't distributed across relationships stays individual; it holds in one mind and tears apart in the group.</p>
+        </div>
+        <div class="nsjc-entry" style="cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--ink);max-width:40ch;">Where does understanding start to break?</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Experiment · in the loom</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">We document the break not to hide it, but because it reveals the limits of what we actually understood.</p>
+        </div>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">accumulating</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;">A notebook that grows with every return to the field. Published when it is ready, not when it is due.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EN Writing -->
+    <section class="nsjc-page" data-page="writing" data-lang="en" dir="ltr" data-screen-label="EN Writing" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-annotation);font-style:italic;font-size:1.2rem;color:var(--thread);">04</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.06em;text-transform:lowercase;color:var(--text-annotation);">writing</span></div>
+        <h1 style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.12;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">Writing</h1>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.7vw,1.35rem);color:var(--text-en-body,var(--text-muted));max-width:52ch;line-height:1.8;margin:1.8rem 0 0;">Here understanding leaves its first field and becomes something that can be read, carried and reused — essays, briefs and research notes.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:2vh 0 6vh;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:.6rem;text-transform:lowercase;">reading list</div>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=Writing" style="border-top:1.5px solid var(--thread);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink);max-width:38ch;">Why information doesn't produce understanding</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Essay · 2026</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">The gap between knowing and doing isn't a shortage of knowledge — it's the absence of what holds it together.</p>
+          <p style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);margin:.9rem 0 0;">→ request a copy by email</p>
+        </a>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=Brief">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink);max-width:38ch;">Brief: relations as structure</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Brief · in the loom</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">A short read on how relations between elements are ordered so they carry understanding together — not each element on its own.</p>
+          <p style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);margin:.9rem 0 0;">→ request a notice when it publishes</p>
+        </a>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">coming</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;">Research notes and conceptual explorations, added as they mature.</span>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- EN Evidence -->
+    <section class="nsjc-page" data-page="evidence" data-lang="en" dir="ltr" data-screen-label="EN Evidence" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-annotation);font-style:italic;font-size:1.2rem;color:var(--thread);">01</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.06em;text-transform:lowercase;color:var(--text-annotation);">evidence</span></div>
+        <h1 style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.12;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">Evidence</h1>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.7vw,1.35rem);color:var(--text-en-body,var(--text-muted));max-width:52ch;line-height:1.8;margin:1.8rem 0 0;">The layer a decision is built on. The thinking is shown, not only the results — where the weave held, where it tore, and how it was re-woven. Only what survives re-weaving earns trust.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:2vh 0 6vh;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:.6rem;text-transform:lowercase;">evidence discipline</div>
+        <div class="nsjc-entry" style="border-top:1.5px solid var(--thread);cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--ink);max-width:40ch;">The thinking is shown, not only the results</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Principle · 01</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">We show how we arrived at understanding, not only its conclusion — so the evidence can be examined and rewoven.</p>
+        </div>
+        <div class="nsjc-entry" style="cursor:default;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.4rem;flex-wrap:wrap;">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--ink);max-width:40ch;">Verification: what survives after reality tears it</div>
+            <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">Principle · 02</span>
+          </div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.75;color:var(--text-en-body,var(--text-muted));margin:.7rem 0 0;max-width:60ch;">We don't trust what hasn't been tested in the field; evidence is tried under pressure and disagreement, and rewoven when it tears.</p>
+        </div>
+        <div style="border-bottom:1px solid var(--border-hairline);padding:1.8rem 0;display:flex;align-items:baseline;gap:1rem;color:var(--text-annotation);">
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;">accumulating</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;">A layer that grows with every engagement. Individual evidence opens as each one matures — the architecture is ready for it today.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EN About -->
+    <section class="nsjc-page" data-page="about" data-lang="en" dir="ltr" data-screen-label="EN About" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-annotation);font-style:italic;font-size:1.2rem;color:var(--thread);">05</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.06em;text-transform:lowercase;color:var(--text-annotation);">about</span></div>
+        <h1 style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.12;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">About the studio</h1>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--ink);max-width:54ch;line-height:1.85;margin:2rem 0 0;">Nasj is an intellectual environment working between understanding and action. It does not add more information; it weaves the scattered into structure that can bear a decision and collective action.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+      <div style="padding:3vh 0 3vh;max-width:64ch;">
+        <div style="margin:0 0 3rem;"><x-import component-from-global-scope="NASJDesignSystem_1ee8d7.PullQuote" cite="Studio thesis" hint-size="100%,130px">Nasj does not add more information; it builds what holds it together — a structure that can bear action when the time comes.</x-import></div>
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:1rem;text-transform:lowercase;">the weaver's role</div>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.85;color:var(--ink);margin:0 0 2.4rem;">The weaver holds neither the knowledge nor its owners' authority; they decide what enters and what is left out — choosing is as much the work as connecting.</p>
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:1rem;text-transform:lowercase;">operating principles</div>
+        <ol style="list-style:none;counter-reset:p;padding:0;margin:0;border-top:1.5px solid var(--thread);">
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">01</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">From relations before outputs, and from system before intervention.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">02</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">We show the thinking, not only the results; we say where the weave tore, and why.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">03</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">Only what survives after reality has torn it and it has been rewoven earns trust.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">04</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">A structure is a tool, not a truth; once it stops adding understanding or improving action, it becomes part of the problem it was woven to solve.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">05</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">A structure does not have the final word; only reality does.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">06</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">Organised disagreement is a thread in the weave, not a cut in it.</span></li>
+          <li style="counter-increment:p;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);"><span style="font-family:var(--font-annotation);font-style:italic;color:var(--thread);font-size:16px;">07</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.75;color:var(--ink);">Collective agency is woven, not discovered.</span></li>
+        </ol>
+
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin:2.6rem 0 1rem;text-transform:lowercase;">how we work</div>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.8;color:var(--text-en-body,var(--text-muted));margin:0 0 1.6rem;max-width:60ch;">Three patterns of intervention, not three departments — each is called on when its condition appears in the field.</p>
+        <div style="border-top:1.5px solid var(--thread);">
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);">A narrative pattern</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">When narratives fracture around one reality, and each side keeps its own separate account.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);">A participation pattern</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">When understanding needs to be woven collectively, not handed down ready-made from one person to others.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.3rem 0;border-bottom:1px solid var(--border-hairline);">
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);">A knowledge pattern</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">When knowledge exists, but can't be carried or used over time.</p>
+          </div>
+        </div>
+      </div>
+
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+      <div style="padding:1vh 0 4vh;max-width:64ch;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:1.4rem;text-transform:lowercase;">the site</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);">
+          <div>
+            <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;color:var(--text-annotation);margin-bottom:.8rem;text-transform:lowercase;">closer to</div>
+            <div style="border-top:1.5px solid var(--thread);">
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--ink);">Field observatories</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--ink);">Living observation notebooks</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--ink);">Archives that are revisited, not just kept</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--ink);">Structures that carry a collective decision</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;color:var(--text-annotation);margin-bottom:.8rem;text-transform:lowercase;">further from</div>
+            <div style="border-top:1.5px solid var(--thread);">
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--text-annotation);">Agencies</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--text-annotation);">Consultancies</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--text-annotation);">Publishing houses</div>
+              <div style="padding:.9rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.1rem,1.6vw,1.35rem);color:var(--text-annotation);">Brand identity studios</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;color:var(--text-annotation);margin:2.6rem 0 1rem;text-transform:lowercase;">what nasj doesn't weave</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px 14px;">
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">Marketing campaigns</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">Promotional content</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">Brand identity</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">Landing pages</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">Growth narratives</span>
+          <span style="font-family:var(--font-en-body,var(--font-body));font-size:15px;color:var(--text-annotation);text-decoration:line-through;text-decoration-color:var(--border-hairline);">Innovation-speak</span>
+        </div>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.8;color:var(--ink);margin:1.8rem 0 0;max-width:56ch;">Anything that produces attention without producing understanding falls outside Nasj's bounds.</p>
+
+        <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+        <div style="margin-top:1vh;">
+          <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;color:var(--text-annotation);margin-bottom:.4rem;text-transform:lowercase;">two conditions that carry the weave</div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-size:15px;line-height:1.8;color:var(--text-en-body,var(--text-muted));margin:0 0 1.6rem;max-width:60ch;">Not two services, but two conditions; understanding is more likely to bear its weight when they meet. Each has a room of its own on this site.</p>
+          <div style="border-top:1.5px solid var(--thread);">
+                        <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+              <div><span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);">A shared structure</span><br><a href="#" data-nav="work" style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);text-decoration:none;">→ Work</a></div>
+              <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">Understanding collapses when information lacks a structure to carry it — it was never woven, only stacked.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 2fr;gap:1rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--border-hairline);">
+              <div><span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);">A shared practice</span><br><a href="#" data-nav="field" style="font-family:var(--font-annotation);font-style:italic;font-size:13px;color:var(--text-annotation);text-decoration:none;">→ Field</a></div>
+              <p style="font-family:var(--font-en-body,var(--font-body));font-size:14.5px;line-height:1.75;color:var(--ink);margin:0;">What doesn't enter practice doesn't enter collective memory.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="max-width:60ch;padding:2vh 0;">
+        <div style="height:1px;background:var(--border-hairline);"></div>
+        <div style="margin-top:3vh;">
+          <div style="font-family:var(--font-en-body,var(--font-body));font-size:13px;color:var(--text-annotation);margin-bottom:1.4rem;text-transform:lowercase;">who is behind nasj?</div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-en-body,var(--text-muted));margin:0 0 1rem;">Nasj began from a pattern noticed across different rooms: teams, coalitions, initiatives, all arriving at the same moment — a visible agreement hiding several different pictures of what was said and settled.</p>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-en-body,var(--text-muted));margin:0 0 1rem;">Those rooms weren't short of intelligence or intent, but of something simpler: someone returning to the same meeting, asking everyone in it the same question, then placing the answers side by side.</p>
+
+          <div style="font-family:var(--font-en-body,var(--font-body));font-size:13px;color:var(--text-annotation);margin-top:40px;margin-bottom:.3rem;text-transform:lowercase;">behind nasj:</div>
+          <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.5rem,2.7vw,2.15rem);color:var(--ink);margin-bottom:.6rem;">Abdalmohimen Ismail</div>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-en-body,var(--text-muted));margin:0 0 1.6rem;">A researcher and learning designer working at the intersection of political economy, social organizing, and knowledge design.</p>
+
+          <p style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-style:italic;font-weight:600;font-size:clamp(.95rem,1.4vw,1.12rem);line-height:1.7;color:var(--ink);margin:0 0 1rem;">This is where Nasj was born — not a side project, but a studio dedicated to one question:<br>how can a group of people see the same reality, before trying to change it?</p>
+          <p style="font-family:var(--font-en-body,var(--font-body));font-weight:300;font-size:14.5px;line-height:1.85;color:var(--text-en-body,var(--text-muted));margin:0;">This work needs a discipline no one person can hold alone between other tasks.</p>
+        </div>
+        <div style="margin-top:3vh;height:1px;background:var(--border-hairline);"></div>
+      </div>
+
+      <div style="padding:0 0 7vh;">
+        <a href="#" data-nav="contact" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:2.6rem;padding:1.4rem 0;border-top:1.5px solid var(--thread);border-bottom:1px solid var(--border-hairline);transition:padding-inline-start 520ms cubic-bezier(.22,.61,.36,1);" onmouseover="this.style.paddingInlineStart='12px'" onmouseout="this.style.paddingInlineStart='0'">
+          <span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.3rem,2vw,1.7rem);color:var(--ink);">If this is the way of working you're looking for</span>
+          <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);flex:none;">→ contact</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- EN Contact -->
+    <section class="nsjc-page" data-page="contact" data-lang="en" dir="ltr" data-screen-label="EN Contact" style="display:none;">
+      <div style="padding:8vh 0 3vh;">
+        <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:1.6rem;"><span style="font-family:var(--font-annotation);font-style:italic;font-size:1.2rem;color:var(--thread);">06</span><span style="font-family:var(--font-en-body,var(--font-body));font-size:13px;letter-spacing:.06em;text-transform:lowercase;color:var(--text-annotation);">contact</span></div>
+        <h1 style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;line-height:1.12;margin:0;font-size:clamp(2.6rem,6vw,5rem);color:var(--ink);">Enter where it suits you</h1>
+        <p style="font-family:var(--font-en-body,var(--font-body));font-size:clamp(1.1rem,1.9vw,1.5rem);color:var(--text-en-body,var(--text-muted));max-width:48ch;line-height:1.85;margin:2rem 0 0;">No sales calls, no urgency. A conversation that begins when you are ready.</p>
+      </div>
+      <x-import component-from-global-scope="NASJDesignSystem_1ee8d7.ThreadDivider" hint-size="100%,24px"></x-import>
+
+      <div style="padding:2vh 0 4vh;max-width:66ch;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:1.2rem;text-transform:lowercase;">when collaboration begins</div>
+        <div style="border-top:1.5px solid var(--thread);">
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">When a problem outgrows the structure that used to hold it.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">When participation narrows to one voice, or fades to none.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">When the research and reports exist, and no one can act on them together.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">When a programme or institution needs a structure that holds through changing people and hard days.</div>
+          <div style="padding:1.1rem 0;border-bottom:1px solid var(--border-hairline);font-family:var(--font-en-body,var(--font-body));font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:var(--ink);">When a group has to decide together on something contested, without fracturing.</div>
+        </div>
+      </div>
+
+      <div style="padding:0 0 4vh;display:flex;flex-direction:column;">
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=A problem to think through together" style="border-top:1.5px solid var(--thread);"><span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink);">Bring us a problem to think through together</span></a>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=Collaborate on a shared question"><span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink);">Collaborate with us, on a shared question</span></a>
+        <a class="nsjc-entry" href="mailto:hello@nasjstudio.com?subject=Take part in the field"><span style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:clamp(1.4rem,2.4vw,2rem);color:var(--ink);">Take part in the field, to learn and contribute</span></a>
+      </div>
+
+      <div style="padding:0 0 6vh;max-width:66ch;">
+        <div style="font-family:var(--font-en-body,var(--font-body));font-size:12px;letter-spacing:.06em;color:var(--text-annotation);margin-bottom:1.2rem;text-transform:lowercase;">how collaboration develops</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;">
+          <div style="border-top:1.5px solid var(--thread);padding-top:1rem;">
+            <div style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);margin-bottom:.4rem;">01</div>
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem;">First thread</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:13.5px;line-height:1.65;color:var(--text-en-body,var(--text-muted));margin:0;">A limited conversation that makes the situation readable before anything larger is built on it.</p>
+          </div>
+          <div style="border-top:1px solid var(--border-hairline);padding-top:1rem;">
+            <div style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);margin-bottom:.4rem;">02</div>
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem;">Going deeper</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:13.5px;line-height:1.65;color:var(--text-en-body,var(--text-muted));margin:0;">We build the frameworks, tools and participation structure based on what the first thread revealed.</p>
+          </div>
+          <div style="border-top:1px solid var(--border-hairline);padding-top:1rem;">
+            <div style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);margin-bottom:.4rem;">03</div>
+            <div style="font-family:var(--font-en-display,'Cormorant Garamond',serif);font-weight:600;font-size:1.1rem;color:var(--ink);margin-bottom:.5rem;">Extended accompaniment</div>
+            <p style="font-family:var(--font-en-body,var(--font-body));font-size:13.5px;line-height:1.65;color:var(--text-en-body,var(--text-muted));margin:0;">We maintain the structure and reweave it with the field over time — we don't hand it over and walk away.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="position:relative;z-index:1;border-top:1px solid var(--border-hairline);background:var(--paper);">
+    <div style="max-width:1120px;margin:0 auto;padding:7vh clamp(20px,6vw,80px) 8vh;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.8rem 2.4rem;">
+      <div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;">
+        <span style="font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1;color:var(--ink);">نسج</span>
+        <span style="font-family:var(--font-annotation);font-weight:500;font-size:16px;line-height:1;letter-spacing:.32em;opacity:.65;color:var(--ink);transform:translateX(5px);">NASJ</span>
+        <span id="nsjc-footer-tagline" style="font-family:var(--font-annotation);font-style:italic;font-size:15px;color:var(--text-annotation);margin-top:8px;">بين الفهم والفعل</span>
+      </div>
+      <nav id="nsjc-footnav" style="display:grid;grid-template-columns:1fr 1fr;gap:.7rem 2.2rem;">
+        <button class="nsjc-navlink" data-nav="evidence"><span data-t="evidence">الشاهد</span></button>
+        <button class="nsjc-navlink" data-nav="work"><span data-t="work">الأعمال</span></button>
+        <button class="nsjc-navlink" data-nav="field"><span data-t="field">الميدان</span></button>
+        <button class="nsjc-navlink" data-nav="writing"><span data-t="writing">الكتابة</span></button>
+        <button class="nsjc-navlink" data-nav="about"><span data-t="about">عن الاستوديو</span></button>
+        <button class="nsjc-navlink" data-nav="contact"><span data-t="contact">تواصل</span></button>
+      </nav>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.6rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--border-hairline);">
+      <span id="nsjc-footer-identity" style="font-family:var(--font-annotation);font-style:italic;font-size:15px;color:var(--annotation-ink);">القاهرة، مصر</span>
+      <a href="mailto:hello@nasjstudio.com" style="font-family:var(--font-annotation);font-style:italic;font-size:16px;color:var(--ink);text-decoration:none;direction:ltr;unicode-bidi:isolate;">hello@nasjstudio.com</a>
+    </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1120,&quot;height&quot;:760},&quot;startPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;about&quot;,&quot;options&quot;:[&quot;evidence&quot;,&quot;work&quot;,&quot;field&quot;,&quot;writing&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Site&quot;},&quot;startLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;ar&quot;,&quot;options&quot;:[&quot;ar&quot;,&quot;en&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Site&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'evidence', lang: 'ar' };
+
+  componentDidMount() {
+    const PROD_HOSTS = ['nasjstudio.com', 'www.nasjstudio.com'];
+    if (PROD_HOSTS.includes(location.hostname)) {
+      document.querySelectorAll('a[data-route-page]').forEach(a => {
+        const page = a.getAttribute('data-route-page');
+        const lang = a.getAttribute('data-route-lang');
+        a.href = page === 'home' ? (lang === 'en' ? '/en' : '/') : ('/site.html?page=' + page + '&lang=' + lang);
+      });
+    }
+    const sp = this.props.startPage, sl = this.props.startLang;
+    if ((sp && sp !== this.state.page) || (sl && sl !== this.state.lang)) {
+      this.state = { ...this.state, page: sp || this.state.page, lang: sl || this.state.lang };
+    }
+    // URL wins over props/defaults — this is what makes cross-page links usable
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const qp = params.get('page'), ql = params.get('lang');
+      const validPages = ['evidence','work','field','writing','about','contact'];
+      if ((qp && validPages.includes(qp)) || (ql && ['ar','en'].includes(ql))) {
+        this.state = { ...this.state, page: (qp && validPages.includes(qp)) ? qp : this.state.page, lang: (ql && ['ar','en'].includes(ql)) ? ql : this.state.lang };
+      }
+    } catch (e) {}
+    this._labels = {
+      ar: { work:'الأعمال', field:'الميدان', writing:'الكتابة', evidence:'الشاهد', about:'عن الاستوديو', contact:'تواصل', specToggle:'المواصفات', tagline:'بين الفهم والفعل', identity:'القاهرة، مصر' },
+      en: { work:'Work', field:'Field', writing:'Writing', evidence:'Evidence', about:'About', contact:'Contact', specToggle:'Specification', tagline:'Between understanding and action', identity:'Cairo, Egypt' }
+    };
+    const root = document.getElementById('nsjc-root');
+    root.addEventListener('click', (e) => {
+      const nav = e.target.closest('[data-nav]');
+      if (nav) {
+        e.preventDefault();
+        const page = nav.getAttribute('data-nav');
+        this.setState({ page });
+        try { history.replaceState(null, '', '?page=' + page + '&lang=' + this.state.lang); } catch (err) {}
+        return;
+      }
+      const lang = e.target.closest('[data-lang-set]');
+      if (lang) {
+        const l = lang.getAttribute('data-lang-set');
+        this.setState({ lang: l });
+        try { history.replaceState(null, '', '?page=' + this.state.page + '&lang=' + l); } catch (err) {}
+        return;
+      }
+    });
+    this._apply();
+  }
+
+  componentDidUpdate() { this._apply(); }
+
+  _apply() {
+    const { page, lang } = this.state;
+    const _key = page + '|' + lang;
+    const _changed = this._prevKey !== _key;
+    this._prevKey = _key;
+
+    // language direction + nav labels
+    const root = document.getElementById('nsjc-root');
+    root.setAttribute('dir', lang === 'en' ? 'ltr' : 'rtl');
+    root.setAttribute('lang', lang);
+    document.querySelectorAll('#nsjc-navbar [data-t], #nsjc-footnav [data-t]').forEach(el => {
+      el.textContent = this._labels[lang][el.getAttribute('data-t')];
+    });
+    const tagline = document.getElementById('nsjc-footer-tagline');
+    const identity = document.getElementById('nsjc-footer-identity');
+    if (tagline) tagline.textContent = this._labels[lang].tagline;
+    if (identity) identity.textContent = this._labels[lang].identity;
+
+    // active nav mark
+    document.querySelectorAll('#nsjc-navbar [data-nav]').forEach(btn => {
+      const on = btn.getAttribute('data-nav') === page;
+      btn.style.color = on ? 'var(--ink)' : 'var(--text-muted)';
+      btn.style.borderBottom = on ? '1.5px solid var(--thread)' : '1.5px solid transparent';
+      btn.style.paddingBottom = '3px';
+    });
+
+    // page visibility
+    document.querySelectorAll('.nsjc-page').forEach(sec => {
+      const on = sec.getAttribute('data-page') === page && sec.getAttribute('data-lang') === lang;
+      sec.style.display = on ? 'block' : 'none';
+      if (on) {
+        sec.style.animation = 'none';
+        sec.style.opacity = '1';
+        sec.style.transform = 'none';
+      }
+    });
+
+    // footer signature handled by _labels/tagline/identity logic in render()
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

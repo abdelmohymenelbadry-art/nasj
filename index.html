@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/colors.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/typography.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/styles.css">
+<script src="_ds/nasj-design-system-1ee8d71f-d972-4908-92c1-75a0648c247e/_ds_bundle.js"></script>
+<style>
+  html{scroll-behavior:smooth;background:var(--paper);}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  ::selection{background:rgba(30,27,24,0.10);color:var(--ink);}
+  @keyframes nsjReveal{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto!important}
+    [data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+    #nsj-bar{animation:none!important;opacity:1!important}
+  }
+  @media (max-width: 480px){
+    svg[aria-hidden="true"]{display:none!important;}
+    #nsj-hero-h1{font-size:clamp(calc(var(--text-4xl)*0.4),5.4vw,calc(var(--text-4xl)*0.82))!important;}
+    .nsj-footer-close{display:block!important;}
+  }
+  @media (max-width: 1024px){
+    .nsj-room{padding-top:9vh!important;padding-bottom:7vh!important;min-height:auto!important;}
+  }
+  .nsj-room + .nsj-room{margin-top:clamp(32px,6vh,80px);border-top:1px solid var(--border-hairline);}
+  .nsj-room{scroll-margin-top:110px;}
+</style>
+</helmet>
+
+<div dir="rtl" lang="ar" style="font-family:var(--font-body);position:relative;">
+
+  <!-- ===== masthead ===== -->
+  <header id="nsj-bar" style="position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--border-hairline);">
+    <div style="max-width:1120px;margin:0 auto;padding:16px clamp(24px,6vw,80px);display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="#nsj-s1" aria-label="نسج · NASJ" style="display:inline-flex;align-items:baseline;gap:11px;text-decoration:none;flex:none;">
+        <span style="font-family:var(--font-display);font-weight:700;font-size:23px;line-height:1;color:var(--ink);">نسج</span>
+        <span style="font-family:var(--font-annotation);font-weight:500;font-size:13px;line-height:1;letter-spacing:.30em;opacity:.65;color:var(--ink);">NASJ</span>
+      </a>
+      <nav aria-label="التنقّل" id="nsj-nav" style="display:flex;flex-wrap:wrap;gap:clamp(12px,1.7vw,26px);align-items:center;">
+        <a href="site.html?page=evidence&amp;lang=ar" data-route-page="evidence" data-route-lang="ar" style="font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">الشاهد</a>
+        <a href="site.html?page=work&amp;lang=ar" data-route-page="work" data-route-lang="ar" style="font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">الأعمال</a>
+        <a href="site.html?page=field&amp;lang=ar" data-route-page="field" data-route-lang="ar" style="font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">الميدان</a>
+        <a href="site.html?page=writing&amp;lang=ar" data-route-page="writing" data-route-lang="ar" style="font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">الكتابة</a>
+        <a href="site.html?page=about&amp;lang=ar" data-route-page="about" data-route-lang="ar" style="font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">عن الاستوديو</a>
+        <a href="site.html?page=contact&amp;lang=ar" data-route-page="contact" data-route-lang="ar" style="font-family:var(--font-body);font-weight:500;font-size:14px;letter-spacing:.01em;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">تواصل</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;flex:none;">
+        <span style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--ink);">العربية</span>
+        <span aria-hidden="true" style="width:1px;height:13px;background:var(--border-hairline);"></span>
+        <a href="en/index.html" data-route-page="home" data-route-lang="en" style="font-family:var(--font-annotation);font-style:italic;font-size:14px;color:var(--text-annotation);text-decoration:none;transition:color 520ms cubic-bezier(.4,0,.2,1);" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-annotation)'">English</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== progress thread (system assembling over time) ===== -->
+  <div id="nsj-spine" aria-hidden="true" style="position:fixed;top:0;bottom:0;left:max(2.4vw,20px);width:12px;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <div style="position:absolute;top:16vh;bottom:16vh;width:1px;background:var(--border-hairline);"></div>
+    <div class="nsj-knot" data-knot="1" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsj-knot" data-knot="2" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsj-knot" data-knot="3" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsj-knot" data-knot="4" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsj-knot" data-knot="5" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsj-knot" data-knot="6" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+    <div class="nsj-knot" data-knot="7" style="width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--annotation);margin:1.9vh 0;z-index:1;transition:background-color var(--dur-slow) var(--ease-material),border-color var(--dur-slow) var(--ease-material);"></div>
+  </div>
+
+  <!-- ===== gallery wall-label ===== -->
+  <div id="nsj-index" aria-hidden="true" style="position:fixed;left:calc(max(2.4vw,20px) + 40px);bottom:26px;z-index:30;padding-inline-end:16px;font-family:var(--font-body);font-size:12.5px;font-weight:500;letter-spacing:.1em;color:var(--text-muted);writing-mode:vertical-rl;text-orientation:mixed;transition:opacity var(--dur-slow) var(--ease-quiet);"><span style="color:var(--ink);font-weight:700;">01</span> / 07 — الوصول</div>
+
+  <!-- ===================== ROOMS ===================== -->
+  <main style="position:relative;z-index:1;">
+
+    <!-- S1 — ARRIVAL -->
+    <section class="nsj-room" id="nsj-s1" data-room="1" data-name="الوصول" data-screen-label="S1 Arrival" style="min-height:clamp(620px,80vh,860px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:flex-start;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;">
+      <div style="max-width:1240px;margin:0 auto;width:100%;">
+        <h1 id="nsj-hero-h1" data-reveal data-delay="0" style="font-family:var(--font-display);font-weight:700;line-height:1.62;margin:0;font-size:clamp(calc(var(--text-4xl)*0.5),5.4vw,calc(var(--text-4xl)*1.18));letter-spacing:.004em;color:var(--ink);">
+          الأحد، العاشرة صباحاً.<br>خمسةٌ حول طاولة، بخمس <span style="border-bottom:0.045em solid var(--ink);padding-bottom:.12em;">صور</span>.
+        </h1>
+        <p data-reveal data-delay="160" style="font-family:var(--font-body);font-size:clamp(calc(var(--text-base)*1.05),2vw,calc(var(--text-lg)*1.05));color:var(--text-muted);max-width:34ch;line-height:1.7;margin:var(--space-4) 0 0;font-weight:300;">
+          الاجتماع انتهى. الاتفاق بدا واضحاً. ثم بدأ العمل.
+        </p>
+        <div data-reveal data-delay="320" style="font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.04em;color:var(--text-annotation);margin-top:var(--space-5);font-weight:500;">تصفّح ببطء</div>
+      </div>
+      <p data-reveal data-delay="320" style="margin:clamp(48px, 8vh, 96px) auto 0;max-width:1240px;width:100%;font-family:var(--font-display);font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));line-height:1.5;">
+        هذا الاجتماع يتكرّر أينما عمل أكثر من شخصٍ معاً.
+      </p>
+    </section>
+
+    <!-- S2 — FRAGMENTATION (signals) -->
+    <section class="nsj-room" id="nsj-s2" data-room="2" data-name="المشكلة" data-screen-label="S2 Fragmentation" style="min-height:clamp(620px,80vh,920px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;">
+      <div style="max-width:1240px;margin:0 auto;width:100%;">
+        <div data-reveal data-delay="0" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--text-annotation);margin-bottom:var(--space-3);font-weight:500;">المشكلة</div>
+        <h2 data-reveal data-delay="80" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-display);font-weight:700;line-height:1.4;margin:0;font-size:clamp(var(--text-xl),5.2vw,calc(var(--text-3xl)*1.15));max-width:20ch;color:var(--ink);">
+          اجتماعٌ واحد. خمسة معانٍ مختلفة.
+        </h2>
+        <div data-reveal data-delay="220" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+          <svg viewBox="0 0 560 66" width="100%" style="max-width:560px;display:block;" aria-hidden="true">
+            <g stroke="#9C938A" stroke-width="2" fill="none" stroke-linecap="round">
+              <line data-draw x1="10" y1="20" x2="74" y2="13"></line>
+              <line data-draw x1="128" y1="50" x2="188" y2="41"></line>
+              <line data-draw x1="240" y1="15" x2="292" y2="31"></line>
+              <line data-draw x1="344" y1="54" x2="408" y2="45"></line>
+              <line data-draw x1="462" y1="22" x2="540" y2="35"></line>
+            </g>
+          </svg>
+        </div>
+        <div data-reveal data-delay="220" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+          <p style="font-family:var(--font-body);font-size:clamp(var(--text-base),1.7vw,calc(var(--text-lg)*1.1));line-height:1.7;color:var(--ink);max-width:36ch;margin:0;font-weight:300;">بعد أسبوعين، تكتشف الفِرَق أنها نفّذت خطةً مختلفة عن التي ظنّت أنها اتّفقت عليها في تلك الغرفة.<br>بعد شهر، يعود الخلاف الذي بدا محسوماً صباح ذلك الأحد.<br>بعد ثلاثة أشهر، يسأل أحدهم: متى قرّرنا هذا أصلاً؟</p>
+          <p style="font-family:var(--font-display);font-weight:700;font-size:clamp(1.6rem,2.8vw,2.3rem);color:var(--ink);line-height:1.5;max-width:22ch;margin:var(--space-3) 0 0;">كلّ واحدٍ منهم كان محقّاً، كلٌّ بطريقته.</p>
+        </div>
+      </div>
+      <p data-reveal data-delay="360" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1240px;width:100%;font-family:var(--font-display);font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));line-height:1.5;">
+        من هنا، تبدأ نسج.
+      </p>
+    </section>
+
+    <!-- S3 — TERRITORY -->
+    <section class="nsj-room" id="nsj-s3" data-room="3" data-name="الإقليم" data-screen-label="S3 Territory" style="min-height:clamp(620px,80vh,920px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;">
+      <div style="max-width:1240px;margin:0 auto;width:100%;">
+        <div data-reveal data-delay="0" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--text-annotation);margin-bottom:var(--space-3);font-weight:500;">الإقليم</div>
+        <h2 data-reveal data-delay="80" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-display);font-weight:700;line-height:1.4;margin:0;font-size:clamp(calc(var(--text-4xl)*0.48),6vw,calc(var(--text-4xl)*1.18));color:var(--ink);">
+          الحلّ المعتاد لا يلمس المشكلة.
+        </h2>
+        <div data-reveal data-delay="220" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+          <svg viewBox="0 0 760 96" width="100%" style="max-width:760px;display:block;direction:ltr;overflow:visible;" aria-hidden="true">
+            <text x="726" y="34" text-anchor="middle" font-family="Amiri,serif" font-weight="700" font-size="24" fill="#1E1B18">الفهم</text>
+            <text x="34" y="34" text-anchor="middle" font-family="Amiri,serif" font-weight="700" font-size="24" fill="#1E1B18">الفعل</text>
+            <line data-draw x1="726" y1="60" x2="34" y2="60" stroke="#1E1B18" stroke-width="1.6"></line>
+            <circle cx="726" cy="60" r="4.5" fill="#1E1B18"></circle>
+            <circle cx="34" cy="60" r="4.5" fill="#9C938A"></circle>
+            <text x="380" y="88" text-anchor="middle" font-family="'IBM Plex Sans Arabic',sans-serif" font-size="12" fill="#7B736B">موطن نسج</text>
+          </svg>
+        </div>
+        <div data-reveal data-delay="320" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+          <p style="font-family:var(--font-body);font-size:clamp(var(--text-base),1.7vw,calc(var(--text-lg)*1.1));line-height:1.7;color:var(--ink);max-width:38ch;margin:0;font-weight:300;">يستدعون وكالةً تُحسّن الرسالة. أو استشارياً يحسم القرار من فوق. أحياناً يُكتب كل هذا في تقريرٍ يحفظه الأرشيف. لكن الصور الخمس التي انقسمت في تلك الغرفة تبقى كما هي. نسج يشتغل هناك تحديداً — على الصورة نفسها، لا على الرسالة أو القرار أو الأرشيف.<br><br>لا يحدث هذا داخل الشركات فقط.<br>يحدث داخل التحالفات، والحركات، وفرق البحث أيضاً.</p>
+        </div>
+      </div>
+      <p data-reveal data-delay="440" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1240px;width:100%;font-family:var(--font-display);font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));line-height:1.5;">
+        والسؤال إذن: من يعيد بناء الصورة التي انكسرت في تلك الغرفة؟
+      </p>
+    </section>
+
+    <!-- S4 — THE LOOM (climax) -->
+    <section class="nsj-room" id="nsj-s4" data-room="4" data-name="النَّوْل" data-screen-label="S4 The Loom" style="min-height:clamp(680px,85vh,980px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;background:var(--paper-sunken);">
+      <div style="max-width:1240px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr;gap:clamp(var(--space-4),5vw,var(--space-5));align-items:center;" id="nsj-loom-grid">
+        <div>
+          <div data-reveal data-delay="0" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--text-annotation);margin-bottom:var(--space-3);font-weight:500;">النَّوْل</div>
+          <h2 data-reveal data-delay="80" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-display);font-weight:700;line-height:1.4;margin:0;font-size:clamp(calc(var(--text-4xl)*0.523),6.5vw,calc(var(--text-4xl)*1.25));color:var(--ink);">
+            لا خطّ إنتاج. بل نَوْل.
+          </h2>
+          <div data-reveal data-delay="360" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+            <p style="font-family:var(--font-body);font-size:clamp(calc(var(--text-base)*1.08),1.7vw,calc(var(--text-lg)*1.08));line-height:1.7;color:var(--ink);max-width:36ch;margin:0;font-weight:300;">نعود إلى ذلك الاجتماع، ونسأل كلّ شخصٍ فيه: ماذا فهمتَ أنت تحديداً؟</p>
+            <p style="font-family:var(--font-body);font-size:clamp(calc(var(--text-base)*1.08),1.7vw,calc(var(--text-lg)*1.08));line-height:1.7;color:var(--ink);max-width:36ch;margin:var(--space-3) 0 0;font-weight:300;">نكتب الإجابات الخمس جنباً إلى جنب، ونرى أين تتناقض بالضبط.</p>
+            <p style="font-family:var(--font-body);font-size:clamp(calc(var(--text-base)*1.08),1.7vw,calc(var(--text-lg)*1.08));line-height:1.7;color:var(--ink);max-width:36ch;margin:var(--space-3) 0 0;font-weight:300;">ثم نبني نسخةً واحدة، يوافق عليها الخمسة فعلاً — لا شكلياً.</p>
+          </div>
+        </div>
+        <div data-reveal data-delay="200" style="opacity:0;animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 40%;">
+          <svg viewBox="0 0 380 180" width="100%" style="max-width:460px;display:block;margin:0 auto;" aria-hidden="true">
+            <g stroke="#9C938A" stroke-width="1.3" opacity="0.55">
+              <line data-draw x1="46" y1="22" x2="46" y2="158"></line>
+              <line data-draw x1="94" y1="22" x2="94" y2="158"></line>
+              <line data-draw x1="142" y1="22" x2="142" y2="158"></line>
+              <line data-draw x1="190" y1="22" x2="190" y2="158"></line>
+              <line data-draw x1="238" y1="22" x2="238" y2="158"></line>
+              <line data-draw x1="286" y1="22" x2="286" y2="158"></line>
+              <line data-draw x1="334" y1="22" x2="334" y2="158"></line>
+            </g>
+            <g stroke="#1E1B18" stroke-width="1.8">
+              <line data-draw x1="26" y1="52" x2="354" y2="52"></line>
+              <line data-draw x1="26" y1="90" x2="354" y2="90" stroke="#B23A1A" data-thread-event=""></line>
+              <line data-draw x1="26" y1="128" x2="354" y2="128"></line>
+            </g>
+            <g fill="#1E1B18">
+              <circle cx="94" cy="52" r="3.4"></circle>
+              <circle cx="190" cy="90" r="4.6" fill="#B23A1A" data-thread-event=""></circle>
+              <circle cx="286" cy="128" r="3.4"></circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <p data-reveal data-delay="480" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1240px;width:100%;font-family:var(--font-display);font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));line-height:1.5;">
+        ومن هذا العمل تخرج أشياءٌ يمكن استخدامها.
+      </p>
+    </section>
+
+    <!-- S5 — WOVEN OBJECTS -->
+    <section class="nsj-room" id="nsj-s5" data-room="5" data-name="النسائج" data-screen-label="S5 Woven Objects" style="min-height:clamp(620px,78vh,900px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;">
+      <div style="max-width:1240px;margin:0 auto;width:100%;">
+        <div data-reveal data-delay="0" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--text-annotation);margin-bottom:var(--space-3);font-weight:500;">النسائج</div>
+        <h2 data-reveal data-delay="80" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-display);font-weight:700;line-height:1.4;margin:0;font-size:clamp(calc(var(--text-4xl)*0.48),6vw,calc(var(--text-4xl)*1.18));color:var(--ink);">
+          نسائج — لا منتجات.
+        </h2>
+        <p data-reveal data-delay="200" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));color:var(--text-muted);max-width:44ch;line-height:1.7;margin:2.4rem 0 0;font-weight:300;">
+          خريطةٌ توضح أين اختلفت الصور الخمس. ورشة عملٍ من ساعتين تُعيد بناء نسخة واحدة. موجزٌ من صفحة يوقّع عليه الخمسة فعلاً.
+        </p>
+        <div data-reveal data-delay="320" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);border-top:1px solid var(--border-hairline);">
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:var(--space-3) 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#1E1B18" stroke-width="1.3" opacity=".75"><line x1="0" y1="9" x2="52" y2="9"></line><line x1="0" y1="21" x2="52" y2="21"></line></g><g stroke="#9C938A" stroke-width="1.1" opacity=".7"><line x1="14" y1="2" x2="14" y2="28"></line><line x1="38" y1="2" x2="38" y2="28"></line></g></svg>
+            <div style="flex:1;font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.71),2.2vw,var(--text-xl));color:var(--ink);">خرائط الفهم المتضارب</div>
+            <div style="flex:none;font-family:var(--font-body);font-size:12px;letter-spacing:.02em;color:var(--text-annotation);font-weight:500;">يتطوّر</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:var(--space-3) 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#1E1B18" stroke-width="1.3" opacity=".75"><line x1="0" y1="15" x2="52" y2="15"></line></g><circle cx="26" cy="15" r="5" fill="none" stroke="#9C938A" stroke-width="1.2"></circle></svg>
+            <div style="flex:1;font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.71),2.2vw,var(--text-xl));color:var(--ink);">أدوات تشخيص الافتراضات</div>
+            <div style="flex:none;font-family:var(--font-body);font-size:12px;letter-spacing:.02em;color:var(--text-annotation);font-weight:500;">مُختبَر</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:var(--space-3) 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#9C938A" stroke-width="1.2" opacity=".7"><line x1="7" y1="3" x2="7" y2="27"></line><line x1="20" y1="3" x2="20" y2="27"></line><line x1="33" y1="3" x2="33" y2="27"></line><line x1="46" y1="3" x2="46" y2="27"></line></g></svg>
+            <div style="flex:1;font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.71),2.2vw,var(--text-xl));color:var(--ink);">ورش تيسير ومواجهة</div>
+            <div style="flex:none;font-family:var(--font-body);font-size:12px;letter-spacing:.02em;color:var(--text-annotation);font-weight:500;">يتشكّل</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:clamp(16px,4vw,48px);padding:var(--space-3) 0;border-bottom:1px solid var(--border-hairline);">
+            <svg width="52" height="30" viewBox="0 0 52 30" style="flex:none;" aria-hidden="true"><g stroke="#1E1B18" stroke-width="1.3" opacity=".6"><line x1="0" y1="7" x2="52" y2="7"></line><line x1="0" y1="15" x2="38" y2="15"></line><line x1="0" y1="23" x2="46" y2="23"></line></g></svg>
+            <div style="flex:1;font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.71),2.2vw,var(--text-xl));color:var(--ink);">موجزات ميدانية وبطاقات دليل</div>
+            <div style="flex:none;font-family:var(--font-body);font-size:12px;letter-spacing:.02em;color:var(--text-annotation);font-weight:500;">يتطوّر</div>
+          </div>
+        </div>
+      </div>
+      <p data-reveal data-delay="440" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1240px;width:100%;font-family:var(--font-display);font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));line-height:1.5;">
+        وكيف نعرف أنها تعمل؟ نجرّبها في اجتماعٍ حقيقي.
+      </p>
+    </section>
+
+    <!-- S6 — WHY IT MATTERS (Field & Evidence) -->
+    <section class="nsj-room" id="nsj-s6" data-room="6" data-name="الميدان" data-screen-label="S6 Field & Evidence" style="min-height:clamp(620px,80vh,920px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;">
+      <div style="max-width:1240px;margin:0 auto;width:100%;">
+        <div data-reveal data-delay="0" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--text-annotation);margin-bottom:var(--space-3);font-weight:500;">الميدان والدليل</div>
+        <h2 data-reveal data-delay="80" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-display);font-weight:700;line-height:1.4;margin:0;font-size:clamp(var(--text-xl),5vw,calc(var(--text-3xl)*1.15));max-width:22ch;color:var(--ink);">
+          اعتقدنا أن خريطةً واحدة تكفي. لم تكن كذلك.
+        </h2>
+        <div data-reveal data-delay="220" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+          <svg viewBox="0 0 560 84" width="100%" style="max-width:560px;display:block;direction:ltr;overflow:visible;" aria-hidden="true">
+            <line data-draw x1="12" y1="38" x2="250" y2="38" stroke="#1E1B18" stroke-width="1.8"></line>
+            <line data-draw x1="312" y1="38" x2="548" y2="38" stroke="#1E1B18" stroke-width="1.8"></line>
+            <circle cx="281" cy="38" r="4.6" fill="#B23A1A" data-thread-event=""></circle>
+            <text x="281" y="72" text-anchor="middle" font-family="'IBM Plex Sans Arabic',sans-serif" font-size="11" fill="#7B736B">فرضيةٌ سقطت، ثم أُعيد البناء</text>
+          </svg>
+        </div>
+        <div data-reveal data-delay="320" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);">
+          <p style="font-family:var(--font-body);font-size:clamp(var(--text-base),1.7vw,calc(var(--text-lg)*1.1));line-height:1.7;color:var(--ink);max-width:36ch;margin:0;font-weight:300;">قدّمنا الخريطة الأولى في الأسبوع التالي. ثلاثةٌ من الخمسة اعترضوا فوراً — خلافٌ لم يظهر في الاجتماع الأصلي أصلاً. أعدنا كتابتها مرّتين قبل أن يوافق الجميع عليها فعلاً. هذا ما نعرضه — لا الثقة، بل التصحيح الذي سبقها.</p>
+        </div>
+      </div>
+      <p data-reveal data-delay="440" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin:clamp(48px, 8vh, 96px) auto 0;max-width:1240px;width:100%;font-family:var(--font-display);font-style:italic;font-weight:700;color:var(--ink);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));line-height:1.5;">
+        إن كان هذا هو العمل الذي تبحث عنه، فالباب مفتوح.
+      </p>
+    </section>
+
+    <!-- S7 — INVITATION -->
+    <section class="nsj-room" id="nsj-s7" data-room="7" data-name="معاً" data-screen-label="S7 Together" style="min-height:clamp(480px,58vh,680px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding-top:clamp(48px, 6vh, 96px);padding-inline-start:clamp(var(--space-3),6vw,96px);padding-inline-end:clamp(96px,10vw,150px);padding-bottom:12vh;position:relative;">
+      <div style="max-width:1240px;margin:0 auto;width:100%;">
+        <div data-reveal data-delay="0" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:var(--text-xs);letter-spacing:.02em;color:var(--text-annotation);margin-bottom:var(--space-3);font-weight:500;">معاً</div>
+        <h2 data-reveal data-delay="80" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-display);font-weight:700;line-height:1.4;margin:0;font-size:clamp(calc(var(--text-4xl)*0.48),6vw,calc(var(--text-4xl)*1.18));color:var(--ink);">
+          هل تعرّفتَ على المشكلة؟
+        </h2>
+        <div data-reveal data-delay="200" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;margin-top:var(--space-4);display:flex;flex-direction:column;">
+          <a href="mailto:hello@nasjstudio.com?subject=مشكلة%20لنفكّر%20فيها%20معاً" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:var(--space-3) 0;border-top:1px solid var(--border-hairline);transition:border-color var(--dur-slow) var(--ease-quiet),padding-inline-start var(--dur-slow) var(--ease-material);" onmouseover="this.style.borderColor='var(--ink)';this.style.paddingInlineStart='10px'" onmouseout="this.style.borderColor='var(--border-hairline)';this.style.paddingInlineStart='0'">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.684),2.4vw,var(--text-xl));color:var(--ink);">عندك اجتماعٌ انتهى الأحد، وخرج منه كلّ واحدٍ بفكرة مختلفة؟ احكِ لنا.</span>
+          </a>
+          <a href="mailto:hello@nasjstudio.com?subject=تعاون%20حول%20سؤال%20مشترك" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:var(--space-3) 0;border-top:1px solid var(--border-hairline);transition:border-color var(--dur-slow) var(--ease-quiet),padding-inline-start var(--dur-slow) var(--ease-material);" onmouseover="this.style.borderColor='var(--ink)';this.style.paddingInlineStart='10px'" onmouseout="this.style.borderColor='var(--border-hairline)';this.style.paddingInlineStart='0'">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.684),2.4vw,var(--text-xl));color:var(--ink);">عندك تحالفٌ أو مبادرة توقّفت رغم أن الجميع اتفقوا على الكلام نفسه؟ لنفهم أين انكسر الفهم.</span>
+          </a>
+          <a href="mailto:hello@nasjstudio.com?subject=المشاركة%20في%20الميدان" style="text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:var(--space-3) 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);transition:border-color var(--dur-slow) var(--ease-quiet),padding-inline-start var(--dur-slow) var(--ease-material);" onmouseover="this.style.borderColor='var(--ink)';this.style.paddingInlineStart='10px'" onmouseout="this.style.borderColor='var(--border-hairline)';this.style.paddingInlineStart='0'">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:clamp(calc(var(--text-xl)*0.684),2.4vw,var(--text-xl));color:var(--ink);">تريد أن ترى كيف نعمل ميدانياً؟ انضمّ لجلسة.</span>
+          </a>
+        </div>
+        <p data-reveal data-delay="320" style="animation:nsjReveal 820ms cubic-bezier(.22,.61,.36,1) both;animation-timeline:view();animation-range:entry 4% cover 22%;font-family:var(--font-body);font-size:clamp(calc(var(--text-lg)*0.778),1.6vw,var(--text-lg));color:var(--text-muted);max-width:44ch;line-height:1.7;margin:2.8rem 0 0;font-weight:300;">
+          لا عرض مبيعات. سؤالٌ تشخيصي بسيط: هل هذا ما تواجهه؟
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== the index (footer as relationship, not utility) ===== -->
+    <footer style="position:relative;z-index:1;padding:8vh clamp(var(--space-3),6vw,96px) 12vh;border-top:1px solid var(--border-hairline);background:var(--paper);">
+      <div class="nsj-footer-close" style="display:none;text-align:center;padding-bottom:4vh;font-family:var(--font-annotation);font-style:italic;font-size:16px;color:var(--ink);">بين الفهم والفعل.</div>
+      <div id="nsj-footer-sentinel" aria-hidden="true" style="height:0;width:100%;"></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem 2.4rem;">
+      <div style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;">
+        <span style="font-family:var(--font-display);font-weight:700;font-size:26px;line-height:1;color:var(--ink);">نسج</span>
+        <span style="font-family:var(--font-annotation);font-weight:500;font-size:18px;line-height:1;letter-spacing:0.32em;opacity:0.65;color:var(--ink);transform:translateX(5px);">NASJ</span>
+        <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;color:var(--text-annotation);margin-top:8px;">بين الفهم والفعل</span>
+      </div>
+      <nav style="display:grid;grid-template-columns:1fr 1fr;gap:.7rem 2.4rem;font-family:var(--font-body);font-size:14px;">
+        <a href="site.html?page=evidence&amp;lang=ar" data-route-page="evidence" data-route-lang="ar" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">الشاهد</a>
+        <a href="site.html?page=work&amp;lang=ar" data-route-page="work" data-route-lang="ar" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">الأعمال</a>
+        <a href="site.html?page=field&amp;lang=ar" data-route-page="field" data-route-lang="ar" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">الميدان</a>
+        <a href="site.html?page=writing&amp;lang=ar" data-route-page="writing" data-route-lang="ar" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">الكتابة</a>
+        <a href="site.html?page=about&amp;lang=ar" data-route-page="about" data-route-lang="ar" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">عن الاستوديو</a>
+        <a href="site.html?page=contact&amp;lang=ar" data-route-page="contact" data-route-lang="ar" style="color:var(--text-muted);text-decoration:none;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--text-muted)'">تواصل</a>
+      </nav>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1.6rem;margin-top:4.4rem;padding-top:1.8rem;border-top:1px solid var(--border-hairline);">
+        <span style="font-family:var(--font-annotation);font-style:italic;font-size:15px;color:var(--annotation-ink);">القاهرة، مصر</span>
+        <a href="mailto:hello@nasjstudio.com" style="font-family:var(--font-annotation);font-style:italic;font-size:16px;color:var(--ink);text-decoration:none;letter-spacing:.01em;direction:ltr;unicode-bidi:isolate;">hello@nasjstudio.com</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;threadEvent&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Thread&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const PROD_HOSTS = ['nasjstudio.com', 'www.nasjstudio.com'];
+    if (PROD_HOSTS.includes(location.hostname)) {
+      document.querySelectorAll('a[data-route-page]').forEach(a => {
+        const page = a.getAttribute('data-route-page');
+        const lang = a.getAttribute('data-route-lang');
+        a.href = page === 'home' ? (lang === 'en' ? '/en' : '/') : ('/site.html?page=' + page + '&lang=' + lang);
+      });
+    }
+    const warpStrength = this.props.warpStrength ?? 0.06;
+    const num = ['01','02','03','04','05','06','07'];
+    const threadEvent = this.props.threadEvent ?? true;
+
+    const setWarp = (mult) => {
+      const warp = document.getElementById('nsj-warp');
+      if (warp) warp.style.opacity = String(Math.min(1, (warpStrength / 0.06) * mult));
+    };
+    const litFor = (n) => {
+      document.querySelectorAll('.nsj-knot').forEach(k => {
+        const lit = +k.getAttribute('data-knot') <= n;
+        // motion is opacity + translation only — no scale on marks
+        k.style.backgroundColor = lit ? '#1E1B18' : '#F5F1E8';
+        k.style.borderColor = lit ? '#1E1B18' : '#9C938A';
+      });
+    };
+
+    // scroll-driven, re-queries the DOM each frame so the runtime's
+    // post-mount re-render (which replaces nodes) never breaks it
+    const applyThread = () => {
+      document.querySelectorAll('[data-thread-event]').forEach(el => {
+        if (el.tagName.toLowerCase() === 'line') el.setAttribute('stroke', threadEvent ? '#B23A1A' : '#1E1B18');
+        else el.setAttribute('fill', threadEvent ? '#B23A1A' : '#1E1B18');
+      });
+    };
+    let footerVisible = false;
+    let ticking = false;
+    const updateMarkers = () => {
+      const indexEl = document.getElementById('nsj-index');
+      const spineEl = document.getElementById('nsj-spine');
+      const compact = window.innerWidth < 860;
+      const hideMarkers = compact || footerVisible;
+      if (indexEl) indexEl.style.display = hideMarkers ? 'none' : 'block';
+      if (spineEl) spineEl.style.display = hideMarkers ? 'none' : 'flex';
+    };
+    const footerEl = document.getElementById('nsj-footer-sentinel');
+    if (footerEl && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        footerVisible = entries[0].isIntersecting;
+        updateMarkers();
+      }, { threshold: 0 });
+      io.observe(footerEl);
+      this._io = io;
+    }
+    const evaluate = () => {
+      ticking = false;
+      const vh = window.innerHeight;
+      let active = 1;
+      document.querySelectorAll('.nsj-room').forEach(room => {
+        const r = room.getBoundingClientRect();
+        const n = +room.getAttribute('data-room');
+        if (r.top <= vh * 0.5) active = Math.max(active, n);
+      });
+      litFor(active);
+      applyThread();
+      setWarp(active >= 4 ? 2.1 : (active >= 3 ? 1.5 : 1));
+      const indexEl = document.getElementById('nsj-index');
+      if (indexEl) {
+        const room = document.querySelector('.nsj-room[data-room="' + active + '"]');
+        const roomName = room ? room.getAttribute('data-name') : '';
+        indexEl.innerHTML = '<span style="color:var(--ink);font-weight:700;">' + num[active-1] + '</span> / 07 — ' + roomName;
+      }
+      updateMarkers();
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(evaluate); } };
+
+    const applyResponsive = () => {
+      const w = window.innerWidth;
+      const nav = document.getElementById('nsj-nav');
+      const grid = document.getElementById('nsj-loom-grid');
+      if (nav) nav.style.display = w < 620 ? 'none' : 'flex';
+      if (grid) grid.style.gridTemplateColumns = w < 820 ? '1fr' : '1.15fr .85fr';
+      updateMarkers();
+    };
+
+    applyResponsive();
+    evaluate();
+    // re-assert through the runtime's early settle re-renders
+    let n = 0;
+    const poll = setInterval(() => { applyResponsive(); evaluate(); if (++n > 8) clearInterval(poll); }, 260);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const onResize = () => { applyResponsive(); onScroll(); };
+    window.addEventListener('resize', onResize);
+    this._cleanup = () => { clearInterval(poll); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize); if (this._io) this._io.disconnect(); };
+  }
+  componentWillUnmount() { if (this._cleanup) this._cleanup(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
